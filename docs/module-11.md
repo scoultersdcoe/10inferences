@@ -1,6 +1,6 @@
 # Module 11: The program worked on average. For whom, and how much is enough?
 
-**Design:** Effect heterogeneity and dose-response within a randomized trial · **File:** m11\_heterogeneity\_dose.csv · **JASP analyses:** ANOVA (for plots), Flexplot (Visual Modeling), Linear Regression
+**Design:** Effect heterogeneity and dose-response within a randomized trial · **File:** [m11_heterogeneity_dose.csv](data/m11_heterogeneity_dose.csv) · **JASP analyses:** ANOVA (for plots), Flexplot (Visual Modeling), Linear Regression
 
 This module uses a simulated program. In the data, half the students in each school and grade were randomly offered a made-up tutoring program, Reading Boost, in 2024-25. Students who were offered it attended anywhere from 0 to 40 sessions, and a known effect that depends on how many sessions they attended was added to their spring scores. The prior-year attendance rate is also made up. Your instructor will share the true effects when you meet.
 

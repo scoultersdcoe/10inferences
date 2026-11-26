@@ -1,6 +1,6 @@
 # Module 4: The groups differ on a few things we can match exactly
 
-**Design:** Exact matching · **File:** m04\_exact\_matching.csv · **JASP analysis:** Linear Regression with weights (after a filter)
+**Design:** Exact matching · **File:** [m04_exact_matching.csv](data/m04_exact_matching.csv) · **JASP analysis:** Linear Regression with weights (after a filter)
 
 ## The problem
 

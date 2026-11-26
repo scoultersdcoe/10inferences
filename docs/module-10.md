@@ -1,6 +1,6 @@
 # Module 10: Assignment can be randomized
 
-**Design:** Randomized controlled trial (RCT) · **File:** m10\_randomized\_trial.csv · **JASP analyses:** Independent Samples T-Test, Linear Regression (or ANCOVA)
+**Design:** Randomized controlled trial (RCT) · **File:** [m10_randomized_trial.csv](data/m10_randomized_trial.csv) · **JASP analyses:** Independent Samples T-Test, Linear Regression (or ANCOVA)
 
 **This module uses a simulated program.** In the data, half the students in each school and grade were randomly assigned to a made-up program in 2024-25, and a known effect was added to their spring scores. Your instructor will share the true effect when you meet.
 

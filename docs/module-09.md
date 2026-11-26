@@ -1,6 +1,6 @@
 # Module 9: Assignment follows a cutoff score
 
-**Design:** Regression discontinuity design (RDD) · **File:** m09\_regression\_discontinuity.csv · **JASP analyses:** ANOVA (for the binned plot), Descriptives, Linear Regression
+**Design:** Regression discontinuity design (RDD) · **File:** [m09_regression_discontinuity.csv](data/m09_regression_discontinuity.csv) · **JASP analyses:** ANOVA (for the binned plot), Descriptives, Linear Regression
 
 **This module uses a simulated program.** ARISE was not assigned by a cutoff score, so your instructor created a made-up reading intervention and added its effect to real students' scores. Your instructor knows the true effect and will share it when you meet, so you can see how close your estimate came.
 

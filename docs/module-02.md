@@ -1,6 +1,6 @@
 # Module 2: We have an untreated group, but only after the program
 
-**Design:** Posttest-only with a comparison group · **File:** m02\_posttest\_only.csv · **JASP analysis:** Independent Samples T-Test
+**Design:** Posttest-only with a comparison group · **File:** [m02_posttest_only.csv](data/m02_posttest_only.csv) · **JASP analysis:** Independent Samples T-Test
 
 ## The problem
 

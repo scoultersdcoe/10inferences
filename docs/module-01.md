@@ -1,6 +1,6 @@
 # Module 1: We observe only the program group, before and after
 
-**Design:** One-group pre-post · **File:** m01\_pre\_post.csv · **JASP analysis:** Paired Samples T-Test
+**Design:** One-group pre-post · **File:** [m01_pre_post.csv](data/m01_pre_post.csv) · **JASP analysis:** Paired Samples T-Test
 
 ## The problem
 

@@ -19,6 +19,7 @@ The book is a companion to the source texts listed in the [References](reference
 **Front matter**
 
 - [How to use this book](preface.md)
+- [Data files](data.md)
 
 **Part I. Foundations**
 

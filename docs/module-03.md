@@ -1,6 +1,6 @@
 # Module 3: The groups differ, and we measured how
 
-**Design:** Regression-adjusted comparison · **File:** m03\_regression\_adjusted.csv · **JASP analysis:** Linear Regression
+**Design:** Regression-adjusted comparison · **File:** [m03_regression_adjusted.csv](data/m03_regression_adjusted.csv) · **JASP analysis:** Linear Regression
 
 ## The problem
 

@@ -1,6 +1,6 @@
 # Module 6: We have an untreated group, observed before and after
 
-**Design:** Difference-in-differences (DiD) · **File:** m06\_diff\_in\_diff.csv · **JASP analyses:** ANOVA (for the picture), Linear Regression, Linear Mixed Models
+**Design:** Difference-in-differences (DiD) · **File:** [m06_diff_in_diff.csv](data/m06_diff_in_diff.csv) · **JASP analyses:** ANOVA (for the picture), Linear Regression, Linear Mixed Models
 
 ## The problem
 

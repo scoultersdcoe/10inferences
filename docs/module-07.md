@@ -1,6 +1,6 @@
 # Module 7: The program starts at a known time, and we have a long history
 
-**Design:** Interrupted time series (ITS) · **File:** m07\_interrupted\_time\_series.csv · **JASP analyses:** Correlation (for the scatter plot), Linear Regression
+**Design:** Interrupted time series (ITS) · **File:** [m07_interrupted_time_series.csv](data/m07_interrupted_time_series.csv) · **JASP analyses:** Correlation (for the scatter plot), Linear Regression
 
 ## The problem
 

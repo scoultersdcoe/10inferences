@@ -68,6 +68,7 @@ nav:
   - Home: index.md
   - Front matter:
       - How to use this book: preface.md
+      - Data files: data.md
   - "Part I. Foundations":
       - "Part 1: Foundations": part1-foundations.md
       - "Part 2: The ARISE data and JASP": part2-data-and-jasp.md

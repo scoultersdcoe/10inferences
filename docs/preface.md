@@ -35,7 +35,7 @@ Checkpoints are numbers like sample sizes (for example, "N should be 5,584"). Th
 ## What you need
 
 - **JASP**, installed on your computer (free from jasp-stats.org).
-- **The eleven module data files** (m01 through m11, .csv), which your instructor provides.
+- **The eleven module data files** (m01 through m11, .csv), which you can download from the [Data files](data.md) page.
 - **The Effect**, by Nick Huntington-Klein, which you can [read free online](https://theeffectbook.net). Chapter numbers in this book match both the 1st (2021) and 2nd (2025) editions for Chapters 1 to 20.
 - A notebook or document for your answers to the reflection questions.
 

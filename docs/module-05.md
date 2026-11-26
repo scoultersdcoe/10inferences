@@ -1,6 +1,6 @@
 # Module 5: The groups differ on too many things to match exactly
 
-**Design:** Propensity score matching · **File:** m05\_propensity\_matching.csv · **JASP analyses:** Logistic Regression, Descriptives, Independent Samples T-Test
+**Design:** Propensity score matching · **File:** [m05_propensity_matching.csv](data/m05_propensity_matching.csv) · **JASP analyses:** Logistic Regression, Descriptives, Independent Samples T-Test
 
 ## The problem
 

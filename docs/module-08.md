@@ -1,6 +1,6 @@
 # Module 8: The program starts at a known time, and an untreated group shares the same history
 
-**Design:** Comparative interrupted time series (CITS) · **File:** m08\_comparative\_its.csv · **JASP analyses:** Flexplot (Visual Modeling), Linear Regression
+**Design:** Comparative interrupted time series (CITS) · **File:** [m08_comparative_its.csv](data/m08_comparative_its.csv) · **JASP analyses:** Flexplot (Visual Modeling), Linear Regression
 
 ## The problem
 
