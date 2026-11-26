@@ -170,7 +170,7 @@ Like Module 7, each row is one testing window, but now there are two series: 18 
 
 **Part A: See it**
 
-3. Make sure no filter is on. If **Visual Modeling** is not in the menu bar, click **+** (top right) and tick it. Click **Visual Modeling**, then **Flexplot**. Put **mean\_z** as the dependent variable. Put **time** and then **arise\_group** as the independent variables, in that order (the first goes on the horizontal axis; the second gets its own colored line). Put **post** in the panel box. Under **Options**, change **Fitted line** to **Regression** and **untick Ghost lines**. You get two panels, before and after ARISE, each with an ARISE line and a comparison line on the **same vertical axis**.
+3. Make sure no filter is on. If **Visual Modeling** is not in the menu bar, click **+** (top right) and tick it. Click **Visual Modeling**, then **Flexplot**. Put **mean\_z** as the dependent variable. Put **time** and then **arise\_group** as the independent variables, in that order (the first goes on the horizontal axis; the second gets its own colored line). Put **post** in the panel box. Under **Options**, change **Fitted line** to **Regression** and **untick Ghost lines**. You get two panels, before and after ARISE, each with an ARISE line and a comparison line on the same vertical axis.
 4. Before running any model, write down what you see: Did the two lines move in parallel before ARISE? After window 7, did the ARISE line move relative to the comparison line?
 
 ![JASP output screenshot](img/fig075.png)
@@ -185,9 +185,9 @@ Figure 19. Flexplot of mean\_z by time for ARISE and Comparison, in panels befor
 
 ## Checkpoints
 
-- **18 rows**: 9 ARISE and 9 Comparison, windows 1 to 9.
-- **post** = 1 for windows **7, 8, 9**.
-- The ANOVA table shows **Regression df = 7** and **Residual df = 10**.
+- 18 rows: 9 ARISE and 9 Comparison, windows 1 to 9.
+- **post** = 1 for windows 7, 8, 9.
+- The ANOVA table shows Regression df = 7 and Residual df = 10.
 
 ## Reading the output
 
@@ -212,7 +212,7 @@ With only 18 data points and 3 post-program windows per group, expect wide confi
 | arise\_x\_time\_after (slope effect) | +0.032 per window | .462 | −0.061 to 0.126 | ARISE's trend improved slightly more after window 7 |
 | arise\_x\_time (pre-trend gap) | −0.022 per window | .135 | −0.052 to 0.008 | ARISE was already falling relative to comparison before ARISE |
 
-Both effect estimates are small and positive, but their CIs include 0 and run from meaningful harm to meaningful benefit: **no evidence that ARISE students did better.**
+Both effect estimates are small and positive, but their CIs include 0 and run from meaningful harm to meaningful benefit: no evidence that ARISE students did better.
 
 **Don't skip the pre-trend row.** arise\_x\_time is negative, matching the plot. It is not significant, but with 6 pre-program points per group the test has little power, so "not significant" does not mean "parallel." If ARISE schools really were on a downward path, the small positive estimates after window 7 could partly be ARISE drifting back toward normal rather than a program effect.
 
@@ -226,9 +226,9 @@ Both effect estimates are small and positive, but their CIs include 0 and run fr
 
 **Reading the plot.** Each dot is one testing window; each line is a straight-line fit for one group. The left panel is before ARISE (windows 1 to 6) and the right panel is after (windows 7 to 9). Both groups share one vertical axis, so you can compare them directly. Ask three questions:
 
-- **Before ARISE, were the lines parallel?** This is the key assumption: the comparison group should show what ARISE schools would have done. Here they were **not**: the ARISE line falls steeply while the comparison line rises slightly. Much of the ARISE drop comes from one point, window 6.
-- **After ARISE, did the ARISE line move relative to the comparison line?** Compare the gap between the lines at the end of the left panel with the gap at the start of the right panel (a level change), and whether the lines spread apart or come together (a slope change). Here both lines fall at a similar rate, with ARISE staying above.
-- **Do both groups share the same ups and downs?** Both drop at windows 6 and 9, which are spring tests. A dip in both groups is something district-wide, not ARISE. Catching that is exactly what the comparison group is for.
+- *Before ARISE, were the lines parallel?* This is the key assumption: the comparison group should show what ARISE schools would have done. Here they were not: the ARISE line falls steeply while the comparison line rises slightly. Much of the ARISE drop comes from one point, window 6.
+- *After ARISE, did the ARISE line move relative to the comparison line?* Compare the gap between the lines at the end of the left panel with the gap at the start of the right panel (a level change), and whether the lines spread apart or come together (a slope change). Here both lines fall at a similar rate, with ARISE staying above.
+- *Do both groups share the same ups and downs?* Both drop at windows 6 and 9, which are spring tests. A dip in both groups is something district-wide, not ARISE. Catching that is exactly what the comparison group is for.
 
 With only 3 points after ARISE in each group, every post-program line rests on very little data.
 
@@ -242,7 +242,7 @@ Translate the arise\_x\_post and arise\_x\_time\_after coefficients with the tab
 
 ## Assumptions
 
-- **The comparison series shows what would have happened.** Without ARISE, the ARISE series would have departed from its trend in the same way the comparison series did.
+- The comparison series shows what would have happened. Without ARISE, the ARISE series would have departed from its trend in the same way the comparison series did.
 - **Similar enough groups.** Ideally similar levels and trends before the program (check arise and arise\_x\_time).
 - **No spillover.** The comparison schools did not adopt parts of ARISE early.
 - **Independent errors and enough points.** As in Module 7, these are both shaky here.
@@ -268,7 +268,7 @@ Translate the arise\_x\_post and arise\_x\_time\_after coefficients with the tab
 
 ## Learn more
 
-- *The Effect*, **Chapter 17, Event Studies,** and **Chapter 18, Difference-in-Differences:** combining a before-and-after comparison with an untreated group, and checking for differences in prior trends.
+- *The Effect*, Chapter 17, Event Studies, and Chapter 18, Difference-in-Differences: combining a before-and-after comparison with an untreated group, and checking for differences in prior trends.
 - *Experimental and Quasi-Experimental Designs* (Shadish, Cook and Campbell), Chapter 6, Interrupted Time-Series Designs: adding a no-treatment control series and why it answers the history threat.
 - *Causal Inference: The Mixtape*, Chapter 9, Difference-in-Differences: the parallel trends idea that CITS extends to whole trends.
 - *WWC Handbook, Version 5.0*, Chapter I, "Assignment to conditions" (p. 15): comparative interrupted time series reviewed as quasi-experimental designs.

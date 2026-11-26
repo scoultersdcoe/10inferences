@@ -1,6 +1,6 @@
 # How to use this book
 
-This book teaches you ten ways to answer one question: **Did a program actually cause a change?** You work through it on your own, at your own pace, in JASP (a free, point-and-click statistics program). After each module, you meet with the instructor to talk through what you found.
+This book teaches you ten ways to answer one question: *Did a program actually cause a change?* You work through it on your own, at your own pace, in JASP (a free, point-and-click statistics program). After each module, you meet with the instructor to talk through what you found.
 
 **Work through the modules in order.** Each one builds on the last. Module 1 uses the simplest design and Module 10 uses the strongest. Along the way you will watch the same program look very effective, then less effective, then not effective at all, depending on the design. Understanding why is the real goal of the course.
 
@@ -30,7 +30,7 @@ This book teaches you ten ways to answer one question: **Did a program actually 
 
 ## About the checkpoints
 
-Checkpoints are numbers like sample sizes (for example, "N should be 5,584"). They tell you whether you opened the right file, applied the right filter, and put the right variables in the right boxes. **If your checkpoint does not match, stop and recheck your setup before you interpret anything.** Checkpoints never give you the answer itself. Working out what the results mean is your job, and that is what you will discuss with your instructor.
+Checkpoints are numbers like sample sizes (for example, "N should be 5,584"). They tell you whether you opened the right file, applied the right filter, and put the right variables in the right boxes. If your checkpoint does not match, stop and recheck your setup before you interpret anything. Checkpoints never give you the answer itself. Working out what the results mean is your job, and that is what you will discuss with your instructor.
 
 ## What you need
 

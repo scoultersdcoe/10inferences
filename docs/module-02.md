@@ -146,7 +146,7 @@ Same four questions as Module 1: what is a row, what is missing, what are typica
 2. Click **Descriptives**. Move **z\_spring** and **score\_spring** into **Variables** and **arise\_group** into **Split**.
 3. Check that **Valid, Missing, Mean, Std. deviation, Minimum** and **Maximum** are ticked. Under **Plots**, tick **Distribution plots**.
 
-**What to look for:** About 2,150 ARISE and 3,596 comparison students; the comparison group is bigger, which is fine. Compare the two groups' means, but also their **SDs**: if one group is much more spread out, that matters for choosing Student or Welch later. Compare the two distribution plots: do they have the same shape, just shifted?
+**What to look for:** About 2,150 ARISE and 3,596 comparison students; the comparison group is bigger, which is fine. Compare the two groups' means, but also their SDs: if one group is much more spread out, that matters for choosing Student or Welch later. Compare the two distribution plots: do they have the same shape, just shifted?
 
 ## Step by step in JASP
 
@@ -174,8 +174,8 @@ Figure 6. Independent Samples T-Test input panel with z\_spring and arise\_group
 
 ## Checkpoints
 
-- **N = 2,150** in the ARISE group and **N = 3,596** in the Comparison group.
-- **df = 5,744** for the Student test (total N minus 2).
+- N = 2,150 in the ARISE group and N = 3,596 in the Comparison group.
+- df = 5,744 for the Student test (total N minus 2).
 
 ## Reading the output
 
@@ -190,7 +190,7 @@ Figure 7. Independent Samples T-Test output
 | Column | What it tells you |
 | --- | --- |
 | t, df, p | The test of whether the group difference could be chance |
-| Mean Difference | First group's mean minus the second's. **Your estimate.** JASP's group order decides the sign, so a negative number may just mean Comparison minus ARISE. Check against the Descriptives table. |
+| Mean Difference | First group's mean minus the second's. Your estimate. JASP's group order decides the sign, so a negative number may just mean Comparison minus ARISE. Check against the Descriptives table. |
 | 95% CI | Plausible range for the true difference |
 | Cohen's d | Effect size in SD units |
 
@@ -235,7 +235,7 @@ Your estimate is the spring gap between ARISE and comparison students in SD unit
 
 ## Learn more
 
-- *The Effect*, **Chapter 6, Causal Diagrams,** and **Chapter 8, Causal Paths and Closing Back Doors:** how a third factor, such as which schools volunteer, can create a difference between groups that the program did not cause.
+- *The Effect*, Chapter 6, Causal Diagrams, and Chapter 8, Causal Paths and Closing Back Doors: how a third factor, such as which schools volunteer, can create a difference between groups that the program did not cause.
 - *Causal Inference: The Mixtape* (Cunningham), Chapter 4, Potential Outcomes Causal Model: the same split of a simple comparison into the effect and selection bias.
 - *Mastering 'Metrics* (Angrist and Pischke), Chapter 1, Randomized Trials: the opening sections show how comparing people who chose differently mixes the effect with selection bias.
 - *Experimental and Quasi-Experimental Designs* (Shadish, Cook and Campbell), Chapter 4: the posttest-only design with nonequivalent groups.

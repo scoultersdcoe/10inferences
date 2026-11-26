@@ -80,10 +80,10 @@ The first line is conditional exchangeability, now among students with the same 
 
 ## The design and its model: logistic regression and matching
 
-Ordinary regression predicts a number, like a test score. **Logistic regression predicts the probability of a yes/no outcome**, like "in an ARISE school (1) or not (0)." Probabilities must stay between 0 and 1, so logistic regression works on the **log-odds** scale and converts back to a probability.
+Ordinary regression predicts a number, like a test score. Logistic regression predicts the probability of a yes/no outcome, like "in an ARISE school (1) or not (0)." Probabilities must stay between 0 and 1, so logistic regression works on the **log-odds** scale and converts back to a probability.
 
-- **Odds** can be confusing at first because they sound like probability but are not the same thing. A simple way to think about them: **probability compares yes to everyone; odds compare yes to no.** Picture 4 students, 1 in an ARISE school and 3 not. The probability of ARISE is 1 out of 4 (0.25). The odds are 1 yes to 3 no (1 ÷ 3 = 0.33). In general, odds = probability ÷ (1 − probability). Even chances (50/50) are odds of 1 to 1, or 1.0. The **log-odds** simply takes the log of the odds, so even chances become 0, more likely than not is positive, and less likely is negative.
-- **Why convert to log-odds?** Regression draws a straight line, and a straight line keeps going up or down forever. A probability can't: it is stuck between 0 and 1. Odds are only half fixed: they can grow without limit but can never drop below 0. Log-odds have **no limits in either direction**, so the straight line can go anywhere, and any value converts back to a sensible probability between 0 and 1. A bonus: log-odds are balanced. Odds of 3 to 1 for and 3 to 1 against become +1.1 and −1.1, the same distance from 0.
+- **Odds** can be confusing at first because they sound like probability but are not the same thing. A simple way to think about them: probability compares yes to everyone; odds compare yes to no. Picture 4 students, 1 in an ARISE school and 3 not. The probability of ARISE is 1 out of 4 (0.25). The odds are 1 yes to 3 no (1 ÷ 3 = 0.33). In general, odds = probability ÷ (1 − probability). Even chances (50/50) are odds of 1 to 1, or 1.0. The **log-odds** simply takes the log of the odds, so even chances become 0, more likely than not is positive, and less likely is negative.
+- **Why convert to log-odds?** Regression draws a straight line, and a straight line keeps going up or down forever. A probability can't: it is stuck between 0 and 1. Odds are only half fixed: they can grow without limit but can never drop below 0. Log-odds have no limits in either direction, so the straight line can go anywhere, and any value converts back to a sensible probability between 0 and 1. A bonus: log-odds are balanced. Odds of 3 to 1 for and 3 to 1 against become +1.1 and −1.1, the same distance from 0.
 - Each logistic **coefficient** is the change in log-odds for a one-unit change in the predictor. Positive means more likely to be in ARISE; negative means less likely.
 - The **odds ratio** (the exponentiated coefficient) is easier to read. An odds ratio of 1.2 means 20% higher odds per unit; 0.8 means 20% lower; 1.0 means no relationship.
 
@@ -197,7 +197,7 @@ Figure 11: Logistic Regression input panel
 
 6. Click **Descriptives**. Move **ps\_score** into **Variables** and **arise\_group** into **Split**.
 7. Tick **Minimum** and **Maximum** under Statistics and Dispersion. Under **Basic Plots**, tick **Distribution plots** and under **Customizable Plots** tick **Boxplots**.
-8. For one plot with both groups overlapping, open a **second Descriptives** (no filter on). Move **ps\_score** into **Variables** and leave **Split** empty. Tick **Frequency plots**, select **arise** in the list and click the arrow to move it into **Separate frequencies**. Under **Type for scale variables**, choose **Density**; under **How to combine separate frequencies**, choose **Identity**. Where the two curves cover the same range, the groups overlap. (If anything is in Split, you will get separate plots instead.)
+8. For one plot with both groups overlapping, open a second Descriptives (no filter on). Move **ps\_score** into **Variables** and leave **Split** empty. Tick **Frequency plots**, select **arise** in the list and click the arrow to move it into **Separate frequencies**. Under **Type for scale variables**, choose **Density**; under **How to combine separate frequencies**, choose **Identity**. Where the two curves cover the same range, the groups overlap. (If anything is in Split, you will get separate plots instead.)
 
 ![JASP output screenshot](img/fig050.png)
 
@@ -207,7 +207,7 @@ Figure 12: Propensity Score Matching for Arise and Comparison Groups
 
 9. **Before matching:** with no filter on, run an **Independent Samples T-Test** with **z\_fall, el** and **swd** as **Dependent Variables**, **arise\_group** as **Grouping Variable**, and **Effect size** ticked. Write down Cohen's d for each; this is the SMD before matching (see Module 3's Get to know the data).
 10. Filter to **ps\_matched = 1** (untick 0).
-11. Run an **Independent Samples T-Test** with **z\_fall, el** and **swd** as **Dependent Variables**, **arise\_group** as **Grouping Variable**, and **Effect size** and **Descriptives** ticked. Cohen's d for each should be **close to 0** (a common rule: below 0.1 in absolute value). Compare each with its before-matching value from step 9: good matching shrinks every SMD toward 0.
+11. Run an **Independent Samples T-Test** with **z\_fall, el** and **swd** as **Dependent Variables**, **arise\_group** as **Grouping Variable**, and **Effect size** and **Descriptives** ticked. Cohen's d for each should be close to 0 (a common rule: below 0.1 in absolute value). Compare each with its before-matching value from step 9: good matching shrinks every SMD toward 0.
 
 **Step 4: The effect**
 
@@ -215,10 +215,10 @@ Figure 12: Propensity Score Matching for Arise and Comparison Groups
 
 ## Checkpoints
 
-- Logistic regression: **N = 5,584**.
-- Overlap: ps\_score runs from about **0.28 to 0.46** in both groups.
-- After the filter: **2,110 ARISE** and **2,110 comparison** students (1,364 comparison students were not matched).
-- Balance check: the matched groups' mean z\_fall differs by about **0.01** or less.
+- Logistic regression: N = 5,584.
+- Overlap: ps\_score runs from about 0.28 to 0.46 in both groups.
+- After the filter: 2,110 ARISE and 2,110 comparison students (1,364 comparison students were not matched).
+- Balance check: the matched groups' mean z\_fall differs by about 0.01 or less.
 
 ## Reading the output
 
@@ -230,11 +230,11 @@ Figure 13: Logistic Regression Coefficients table
 
 **Logistic Regression: Coefficients.** One row per predictor (grade appears as several rows, each compared with kindergarten). Look at the **Odds Ratio** and **p** columns:* Which characteristics make a student more or less likely to be in an ARISE school?*
 
-**Reading the plots.** In the **distribution plot**, the horizontal axis is the propensity score (0 to 1) and the height of each bar is how many students have a score in that range. The smooth curve traces the same shape. In the **box plots**, the thick line is the median, the box holds the middle half of students, and the whiskers reach out to the rest; dots beyond the whiskers are unusual scores. Compare the two groups side by side because you want their shapes and boxes to cover the same range.
+**Reading the plots.** In the distribution plot, the horizontal axis is the propensity score (0 to 1) and the height of each bar is how many students have a score in that range. The smooth curve traces the same shape. In the box plots, the thick line is the median, the box holds the middle half of students, and the whiskers reach out to the rest; dots beyond the whiskers are unusual scores. Compare the two groups side by side because you want their shapes and boxes to cover the same range.
 
 **Descriptives and plots of ps\_score.** *Do the two groups' distributions sit on top of each other (good overlap)?* *Are there ARISE students with scores no comparison student has (poor overlap)?* Also notice how narrow the range is. If all propensity scores are close together, students' characteristics hardly explain which school they attend.
 
-**Balance t-tests.** You are hoping for **no** difference here. Look at Cohen's d, not the p-value: balance is about the size of the difference. Cohen's d here is the SMD (Module 3). Put the before and after values side by side, one row per variable: good matching moves every SMD toward 0.
+**Balance t-tests.** You are hoping for no difference here. Look at Cohen's d, not the p-value: balance is about the size of the difference. Cohen's d here is the SMD (Module 3). Put the before and after values side by side, one row per variable: good matching moves every SMD toward 0.
 
 **Worked example: SMDs before and after matching.**
 
@@ -242,7 +242,7 @@ Figure 13: Logistic Regression Coefficients table
 | --- | --- | --- | --- |
 | z\_fall | 0.076 | −0.010 | Gap closed: was above 0.05, now well under |
 | el | −0.105 | −0.003 | Gap closed: was above 0.1, now essentially 0 |
-| swd | −0.020 | 0.058 | **Got worse:** was under 0.05, now just over |
+| swd | −0.020 | 0.058 | Got worse: was under 0.05, now just over |
 
 Matching fixed the two biggest gaps, fall scores and EL status. But the disability gap grew, from 0.02 to 0.06. This happens because a propensity score balances the characteristics as a group, not each one perfectly, and pairing students up can push a small gap the other way. An SMD of 0.058 is still under the looser 0.1 rule, but it is just over the WWC's 0.05 line, which means the analysis should adjust for swd. One way is in Step 4, run a Linear Regression on the matched sample with z\_spring as the outcome and both arise and swd as covariates, and compare the arise coefficient with the t-test's mean difference. Notice the p-value for swd after matching: p = .058, "not significant," yet its SMD says the gap is big enough to adjust for. That is why balance is judged by SMDs, not p-values.
 
@@ -282,7 +282,7 @@ Translate the matched t-test estimate into i-Ready points, share of a year's gro
 
 ## Learn more
 
-- *The Effect*, **Chapter 14, Matching:** propensity scores, choosing matches, calipers, balance tables and common support.
+- *The Effect*, Chapter 14, Matching: propensity scores, choosing matches, calipers, balance tables and common support.
 - *Causal Inference: The Mixtape* (Cunningham), Chapter 5, Matching and Subclassification: propensity score methods, common support and balance.
 - *What If* (Hernán and Robins), Chapter 15, sections 15.2 to 15.4: propensity scores, and stratifying and matching on them.
 - *Methods Matter* (Murnane and Willett), Chapter 12: propensity scores in education research, and what they cannot fix.

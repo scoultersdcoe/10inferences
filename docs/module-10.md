@@ -12,11 +12,11 @@ Every earlier design had to argue that its comparison group was a fair copy of t
 - **The trial you wish you had.** This one: a coin flip within each school and grade decides who gets the program.
 - **The stand-in available.** The control group, which differs from the program group only by chance.
 
-Every design so far has wrestled with one problem. Namely, the groups might have been different **before** the program, in ways we can't fully measure. Random assignment solves this problem by design. When a coin flip decides who gets the program, nothing about the students (motivation, family support, prior skill, anything measured or not) can influence who ends up in which group. On average, the two groups are alike in every way **except** the program.
+Every design so far has wrestled with one problem. Namely, the groups might have been different before the program, in ways we can't fully measure. Random assignment solves this problem by design. When a coin flip decides who gets the program, nothing about the students (motivation, family support, prior skill, anything measured or not) can influence who ends up in which group. On average, the two groups are alike in every way except the program.
 
 The stand-in for "what would have happened" is the **control group**, which is a fair copy of the program group thanks to chance alone. A simple difference in average outcomes is then an unbiased estimate of the program's effect.
 
-That's why RCTs are often called the **gold standard**. They are not perfect, they can be costly, sometimes unethical or impractical, and they have their own threats (below). But they rule out selection bias in a way no other design can.
+That's why RCTs are often called the gold standard. They are not perfect, they can be costly, sometimes unethical or impractical, and they have their own threats (below). But they rule out selection bias in a way no other design can.
 
 **Blocking.** Here, randomization was done separately within each school and grade (a **block**), so each block has about half program and half control students. This guarantees balance on school and grade, not just on average.
 
@@ -70,7 +70,7 @@ Read it as: a student's potential outcomes had nothing to do with which group th
 
 **The analysis is simple:** an independent samples t-test comparing program and control students (Module 2). Because of randomization, the posttest-only comparison that was untrustworthy in Module 2 is now trustworthy.
 
-**Adding a baseline covariate improves precision.** Including fall scores in a regression does **not** change what is being estimated (randomization already balanced fall scores), but it explains much of the variation in spring scores, so the estimate becomes much **more precise** (smaller standard error, narrower CI). This is the main reason RCT analysts adjust for a pretest.
+**Adding a baseline covariate improves precision.** Including fall scores in a regression does not change what is being estimated (randomization already balanced fall scores), but it explains much of the variation in spring scores, so the estimate becomes much more precise (smaller standard error, narrower CI). This is the main reason RCT analysts adjust for a pretest.
 
 **Two versions of the outcome.** rct\_spring is the spring score in i-Ready points, which are easy to picture. rct\_z\_spring is the same score as a z-score within grade, built with the same norms as z\_spring in the other modules, so its effect is already in SD units and can be compared with Modules 2 to 9. Because randomization was done within each school and grade, the two groups have the same grade mix, so both versions give a fair comparison. Use rct\_z\_spring for your main estimate. Do not use the Cohen's d from the rct\_spring t-test as the effect size. It divides by an SD that mixes kindergartners with 5th graders (about 81 points), so it makes the effect look smaller than it is within any one grade, where the SD is about 40 to 60 points.
 
@@ -142,7 +142,7 @@ Here R² is the share of the variation in spring scores that fall scores explain
 1. Open **m10\_randomized\_trial.csv**. Each row is one student.
 2. Click **Descriptives**. Move **rct\_z\_spring, rct\_spring, score\_fall, el** and **swd** into **Variables** and **rct\_group** into **Split**. Under **Plots**, tick **Distribution plots**.
 
-**What to look for:** Two groups of about 3,000 students each. Look at the **Missing** row for **score\_fall**: some students have no fall score (this is why the regression later has fewer students than the t-test). Is the share missing **about the same in both groups**? If one group is missing many more fall scores, that is worth noticing, even in a randomized trial. Otherwise, the two groups should look very alike on everything measured before the program, which is the whole point of random assignment.
+**What to look for:** Two groups of about 3,000 students each. Look at the **Missing** row for **score\_fall**: some students have no fall score (this is why the regression later has fewer students than the t-test). Is the share missing about the same in both groups? If one group is missing many more fall scores, that is worth noticing, even in a randomized trial. Otherwise, the two groups should look very alike on everything measured before the program, which is the whole point of random assignment.
 
 ## Step by step in JASP
 
@@ -164,7 +164,7 @@ Here R² is the share of the variation in spring scores that fall scores explain
 **Part A: Check that randomization worked (balance)**
 
 3. Click **T-Tests**, then **Independent Samples T-Test**. Put **score\_fall, el** and **swd** in **Dependent Variables** and **rct\_group** in **Grouping Variable**.
-4. Tick **Descriptives** and **Effect size**. You are hoping for **tiny** differences (Cohen's d close to 0). Cohen's d here is the SMD from Module 3; with random assignment and about 3,000 students per group, expect every SMD to be small, mostly under 0.05.
+4. Tick **Descriptives** and **Effect size**. You are hoping for tiny differences (Cohen's d close to 0). Cohen's d here is the SMD from Module 3; with random assignment and about 3,000 students per group, expect every SMD to be small, mostly under 0.05.
 
 **Part B: Estimate the effect**
 
@@ -187,9 +187,9 @@ Figure 26. t-test (bottom) and regression output (top)
 
 ## Checkpoints
 
-- t-test: **Program N = 3,043**, **Control N = 3,067**, **df = 6,108**.
-- Balance: mean fall scores of about **458** in both groups.
-- Regression: **N = 5,904** (students missing a fall score drop out).
+- t-test: Program N = 3,043, Control N = 3,067, df = 6,108.
+- Balance: mean fall scores of about 458 in both groups.
+- Regression: N = 5,904 (students missing a fall score drop out).
 
 ## Reading the output
 
@@ -204,7 +204,7 @@ Figure 26. t-test (bottom) and regression output (top)
 | t-test (Part B) | Mean Difference | SE Difference |
 | Regression (Part C) | rct\_assign coefficient | Standard Error |
 
-The two estimates should be **similar**. The regression's standard error should be **much smaller**. That is the payoff from adjusting for a strong predictor.
+The two estimates should be similar. The regression's standard error should be much smaller. That is the payoff from adjusting for a strong predictor.
 
 ## Explaining it to stakeholders
 
@@ -257,8 +257,8 @@ Randomization removes selection bias, but real RCTs still face:
 
 ## Learn more
 
-- *The Effect*, **Chapter 9, Finding Front Doors:** why randomized experiments remove back-door paths, and their practical limits.
-- *The Effect*, **Chapter 15, Simulation:** how researchers create data with a known effect, as your instructor did for Modules 9 and 10, to test whether a method works.
+- *The Effect*, Chapter 9, Finding Front Doors: why randomized experiments remove back-door paths, and their practical limits.
+- *The Effect*, Chapter 15, Simulation: how researchers create data with a known effect, as your instructor did for Modules 9 and 10, to test whether a method works.
 - *What If*, Chapter 2, Randomized Experiments: why randomization gives exchangeability, including conditional randomization within blocks.
 - *Mastering 'Metrics*, Chapter 1, Randomized Trials: selection bias and how a coin flip removes it, with a worked health insurance example.
 - *Methods Matter*, Chapters 4, 6 and 7: designing a randomized experiment in education, the challenges of carrying one out, and statistical power.

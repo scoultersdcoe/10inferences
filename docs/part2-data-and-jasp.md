@@ -8,7 +8,7 @@ Students in grades K to 5 take the i-Ready reading test three times a year: fall
 
 Modules 1 to 8 ask one question: Did ARISE improve students' spring reading scores in 2024-25?
 
-Modules 9 and 10 use a **simulated** program. Your instructor added a made-up program effect to real student scores, so the true answer is known. After you finish those modules, your instructor will share it so you can see how close each design came.
+Modules 9 and 10 use a simulated program. Your instructor added a made-up program effect to real student scores, so the true answer is known. After you finish those modules, your instructor will share it so you can see how close each design came.
 
 | Group | Schools | When ARISE started |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ Moving a typical student from the 50th to the 58th percentile is the same as say
 
 ## The data files
 
-Each module has its own file, already trimmed to the students and variables you need. Every yes/no variable is coded **1 = yes, 0 = no**. An empty cell means the value is missing.
+Each module has its own file, already trimmed to the students and variables you need. Every yes/no variable is coded 1 = yes, 0 = no. An empty cell means the value is missing.
 
 | File | Module | Rows are | Rows |
 | --- | --- | --- | --- |

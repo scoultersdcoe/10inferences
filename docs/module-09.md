@@ -18,7 +18,7 @@ Why does that work? A student who scored 1 point below the cutoff and one who sc
 
 The stand-in for "what would have happened" is the students just on the other side of the line.
 
-**The story.** Each fall, every student whose fall reading z-score fell below **−0.63** (roughly the bottom 25%) was offered a reading intervention. Not everyone offered took part (about 85% did), and a few students above the cutoff got in anyway (about 5%). The outcome is the spring z-score. Four school years are combined to give enough students near the cutoff.
+**The story.** Each fall, every student whose fall reading z-score fell below −0.63 (roughly the bottom 25%) was offered a reading intervention. Not everyone offered took part (about 85% did), and a few students above the cutoff got in anyway (about 5%). The outcome is the spring z-score. Four school years are combined to give enough students near the cutoff.
 
 ## Picture the design: filling in the missing world
 
@@ -69,9 +69,9 @@ A fuzzy RDD, like the one in this module, needs two more conditions to turn the 
 
 ## The design and its model: regression discontinuity
 
-The **running variable** is the score that decides eligibility, re-centered so the cutoff is at **0**. Here, **rdd\_running** = fall z-score + 0.63. Negative = eligible.
+The **running variable** is the score that decides eligibility, re-centered so the cutoff is at 0. Here, **rdd\_running** = fall z-score + 0.63. Negative = eligible.
 
-**Fitting two lines.** Within a window around the cutoff (the **bandwidth**), fit one line for students below the cutoff and one for students above. The **gap between the lines at 0** is the effect. The regression uses three predictors:
+**Fitting two lines.** Within a window around the cutoff (the **bandwidth**), fit one line for students below the cutoff and one for students above. The gap between the lines at 0 is the effect. The regression uses three predictors:
 
 
 $$
@@ -79,7 +79,7 @@ $$
 $$
 
 
-- **b1 (rdd\_eligible):** the jump at the cutoff. **This is the RDD estimate.**
+- **b1 (rdd\_eligible):** the jump at the cutoff. This is the RDD estimate.
 - **b2 (rdd\_running):** the slope of the line above the cutoff.
 - **b3 (rdd\_elig\_x\_running):** how much the slope differs below the cutoff (so the two lines can tilt differently).
 
@@ -87,7 +87,7 @@ $$
 
 - The jump in the outcome at the cutoff is the effect of being offered the program (the **intent-to-treat effect**, ITT).
 - The jump in participation at the cutoff is the first stage. It determines how much more likely eligible students were to actually get the program.
-- **Effect of receiving the program = ITT ÷ first stage.** For example, if being offered a program raised scores by 0.06 and raised participation by 0.60 (60 percentage points), receiving it raised scores by 0.06 ÷ 0.60 = 0.10. This applies to students near the cutoff who took the program because they were offered it.
+- Effect of receiving the program = ITT ÷ first stage. For example, if being offered a program raised scores by 0.06 and raised participation by 0.60 (60 percentage points), receiving it raised scores by 0.06 ÷ 0.60 = 0.10. This applies to students near the cutoff who took the program because they were offered it.
 
 **Bandwidth.** A narrow window compares students who are most alike, but includes fewer of them (less precise). A wide window has more students, but those far from the cutoff are less comparable and a straight line may fit poorly. Good practice is to check that the answer holds up across several bandwidths. **Triangular weights** give students closest to the cutoff the most weight.
 
@@ -206,8 +206,8 @@ A student at the cutoff gets weight 1, a student halfway to the edge of the band
 
 **Part A: See the jump**
 
-4. Click **ANOVA**, then **ANOVA**. Put **rdd\_z\_spring** in **Dependent Variable** and **rdd\_bin** in **Fixed Factors. The ANOVA is only there to draw the plot; ignore its tables**.
-5. Open **Descriptives Plots**. Put **rdd\_bin** on the **Horizontal Axis** and tick **Display error bars**. Each point is the average spring score in a narrow slice of fall scores. The cutoff falls between **−0.025** and **0.025 (the dashed line in Figure 21). In your own plot the labels will overlap, so count the dots: the cutoff is between the 10th and 11th**.
+4. Click **ANOVA**, then **ANOVA**. Put **rdd\_z\_spring** in **Dependent Variable** and **rdd\_bin** in **Fixed Factors**. The ANOVA is only there to draw the plot; ignore its tables.
+5. Open **Descriptives Plots**. Put **rdd\_bin** on the **Horizontal Axis** and tick **Display error bars**. Each point is the average spring score in a narrow slice of fall scores. The cutoff falls between −0.025 and 0.025 (the dashed line in Figure 21). In your own plot the labels will overlap, so count the dots: the cutoff is between the 10th and 11th.
 
 ![JASP output screenshot](img/fig085.png)
 
@@ -219,11 +219,11 @@ Figure 21: average spring z-score in each fall-score bin. Scores rise from left 
 
 Figure 22: share of students who received the program in each bin. Participation drops from about 85% to about 5% at the cutoff (dashed line)
 
-**See the jump as two lines (Flexplot).** The binned plot's labels crowd together, and the jump can be hard to spot. With the **rdd\_bw050** filter still on, click **Visual Modeling**, then **Flexplot** (add it with **+** if needed). Set **rdd\_eligible** to **Nominal**. Put **rdd\_z\_spring** as the dependent variable, and **rdd\_running** and then **rdd\_eligible** as the independent variables. Under **Options**, set **Fitted line** to **Regression**, slide **Point transparency** close to **0** so the dots fade, and tick **Plot confidence bands**. You get one straight line on each side of the cutoff at 0.
+**See the jump as two lines (Flexplot).** The binned plot's labels crowd together, and the jump can be hard to spot. With the **rdd\_bw050** filter still on, click **Visual Modeling**, then **Flexplot** (add it with **+** if needed). Set **rdd\_eligible** to **Nominal**. Put **rdd\_z\_spring** as the dependent variable, and **rdd\_running** and then **rdd\_eligible** as the independent variables. Under **Options**, set **Fitted line** to **Regression**, slide **Point transparency** close to 0 so the dots fade, and tick **Plot confidence bands**. You get one straight line on each side of the cutoff at 0.
 
 ![Flexplot of spring scores by running score, with a straight line on each side of the cutoff at 0](img/fig087.png)
 
-**Figure 23****: Using Flexplot to visualize the jump at 0**
+Figure 23: Using Flexplot to visualize the jump at 0
 
 **Part B: Check the design**
 
@@ -277,10 +277,10 @@ The same effect looks larger as a share of growth in older grades. That is becau
 
 ## Checkpoints
 
-- With the rdd\_bw050 filter: **N = 6,734** (2,695 eligible, 4,039 not eligible).
-- The binned plot has **20 bins**, from −0.475 to 0.475.
-- Share who received the program: about **85%** of eligible and about **5%** of ineligible students (Descriptives of rdd\_received split by rdd\_eligible, or the Part A participation plot).
-- rdd\_bw025: **N = 3,264**. rdd\_bw075: **N = 9,801**.
+- With the rdd\_bw050 filter: N = 6,734 (2,695 eligible, 4,039 not eligible).
+- The binned plot has 20 bins, from −0.475 to 0.475.
+- Share who received the program: about 85% of eligible and about 5% of ineligible students (Descriptives of rdd\_received split by rdd\_eligible, or the Part A participation plot).
+- rdd\_bw025: N = 3,264. rdd\_bw075: N = 9,801.
 
 ## Reading the output
 
@@ -316,7 +316,7 @@ Figure 25. Coefficients table from Part D (rdd\_received as the dependent variab
 | Model | The rdd\_eligible coefficient is… |
 | --- | --- |
 | el or swd outcome (Part B) | A balance check. Should be near 0 |
-| rdd\_z\_spring (Part C) | The **effect of being offered** (ITT), in SD units |
+| rdd\_z\_spring (Part C) | The effect of being offered (ITT), in SD units |
 | rdd\_received (Part D) | The **first stage**: jump in the share who got the program |
 | z\_spring (Part E placebo) | Should be near 0, because no program was added to z\_spring |
 
@@ -335,16 +335,16 @@ This design gives two numbers, and each answers a different question. The ITT (P
 - **No manipulation of the running variable.** Students (or teachers) could not push scores just below the cutoff to qualify.
 - **Continuity.** Without the program, outcomes would change smoothly across the cutoff. Nothing else changes at the same score.
 - **The right shape.** Within the bandwidth, a straight line on each side fits the data reasonably.
-- **For the fuzzy estimate:** being below the cutoff affects scores **only** through receiving the program.
-- **The answer is local.** It applies to students **near** the cutoff, not to all students.
+- **For the fuzzy estimate:** being below the cutoff affects scores only through receiving the program.
+- **The answer is local.** It applies to students near the cutoff, not to all students.
 
 ## Threats to internal validity
 
 - **Manipulation or sorting** at the cutoff.
 - **Other programs using the same cutoff.** In real schools, a benchmark score often triggers several supports at once. RDD would credit them all to one program.
 - **Imbalance at the cutoff** in student characteristics (Part B).
-- **Too narrow a bandwidth** (noisy) or **too wide** (comparing unlike students).
-- **Note:** regression to the mean is **not** a threat here. It affects students on both sides of the cutoff equally, which is one of RDD's strengths.
+- **Too narrow a bandwidth** (noisy) or too wide (comparing unlike students).
+- **Note:** regression to the mean is not a threat here. It affects students on both sides of the cutoff equally, which is one of RDD's strengths.
 
 ## Bring to your instructor
 
@@ -360,9 +360,9 @@ This design gives two numbers, and each answers a different question. The ITT (P
 
 ## Learn more
 
-- *The Effect*, **Chapter 20, Regression Discontinuity:** running variables, bandwidths, fuzzy RDD and checks for manipulation and balance.
-- *The Effect*, **Chapter 19, Instrumental Variables:** the logic behind dividing by the first stage in a fuzzy RDD.
-- *The Effect*, **Chapter 10, Treatment Effects:** why an RDD estimate is local to people near the cutoff.
+- *The Effect*, Chapter 20, Regression Discontinuity: running variables, bandwidths, fuzzy RDD and checks for manipulation and balance.
+- *The Effect*, Chapter 19, Instrumental Variables: the logic behind dividing by the first stage in a fuzzy RDD.
+- *The Effect*, Chapter 10, Treatment Effects: why an RDD estimate is local to people near the cutoff.
 - *Causal Inference: The Mixtape*, Chapter 6, Regression Discontinuity: continuity, sharp and fuzzy designs, bandwidths and the density test.
 - *Causal Inference: The Mixtape*, Chapter 7, Instrumental Variables: compliers, monotonicity and why the ratio estimates a LATE.
 - *Mastering 'Metrics*, Chapter 4, Regression Discontinuity Designs: a plain-language tour with worked examples.

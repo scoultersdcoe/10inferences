@@ -86,7 +86,7 @@ For ARISE students, the spring score you observe is Y₁. The average change equ
 
 Each student has two scores, fall and spring. The paired t-test:
 
-1. Computes each student's **difference** (spring minus fall).
+1. Computes each student's difference (spring minus fall).
 2. Averages those differences. This is the **mean difference**.
 3. Asks whether that average is far enough from zero that chance is an unlikely explanation. It divides the mean difference by its standard error (how much the average would bounce around from sample to sample). The result is the **t statistic**; the farther it is from zero, in either direction, the smaller the p-value. With 400 students, a t statistic of about 2 or more (or −2 or less) will produce a p-value below .05.
 
@@ -118,10 +118,10 @@ The SE shrinks as n grows, because an average of many students bounces around le
 
 Before running any test, spend five minutes getting to know the file. This is called **exploratory data analysis (EDA)**, and every module starts with it. You are answering four questions:
 
-- **What is a row, and how many are there?** Here, each row is one student.
-- **What is missing?** Missing values shrink your sample, and if they are missing for a reason, they can bias your answer.
-- **What are typical values?** Look at the mean, SD, minimum and maximum. Do they make sense? A score of 0 or 9999 is a data problem, not a student.
-- **What shape is the data?** One hump or two? Lopsided? Any values far from the rest?
+- *What is a row, and how many are there?* Here, each row is one student.
+- *What is missing?* Missing values shrink your sample, and if they are missing for a reason, they can bias your answer.
+- *What are typical values?* Look at the mean, SD, minimum and maximum. Do they make sense? A score of 0 or 9999 is a data problem, not a student.
+- *What shape is the data?* One hump or two? Lopsided? Any values far from the rest?
 
 Problems are much cheaper to catch now than after you have interpreted a result.
 
@@ -167,8 +167,8 @@ Figure 4. Paired Samples T-Test input panel with score\_spring and score\_fall p
 
 ## Checkpoints
 
-- **N = 2,082** students in the Descriptives table, for both measures.
-- **df = 2,081** in the t-test table (df is N minus 1 for a paired test).
+- N = 2,082 students in the Descriptives table, for both measures.
+- df = 2,081 in the t-test table (df is N minus 1 for a paired test).
 - **Mean fall score = 462.6.**
 
 If these don't match, check that you opened the right file and that no filter is on.
@@ -188,18 +188,18 @@ Figure 5. Paired Samples T-Test output tables
 | t | Mean difference divided by its standard error. Far from 0 = unlikely to be chance |
 | df | Degrees of freedom (N minus 1) |
 | p | Probability of a difference this big if the true change were zero |
-| Mean Difference | Average spring minus fall, in scale-score points. **This is your estimate.** |
+| Mean Difference | Average spring minus fall, in scale-score points. This is your estimate. |
 | SE Difference | How precisely the mean difference is estimated |
 | 95% CI | Plausible range for the true mean difference |
-| Cohen's d | The mean change divided by the SD of students' changes. Not comparable with the effect sizes in later modules (see below)**.** |
+| Cohen's d | The mean change divided by the SD of students' changes. Not comparable with the effect sizes in later modules (see below). |
 
 **Test of Normality (Shapiro-Wilk).** Checks whether the *differences* (spring minus fall) look roughly bell-shaped, which is what the paired t-test assumes. The table gives two numbers. **W** runs from 0 to 1, where 1 means perfectly normal; here W = 0.99, about as close to normal as real data get. **p** is below .001, so the test calls it "significant." That is not a contradiction: with 2,000+ students, the test flags departures far too small to matter, and the t-test is not harmed by them at this sample size.
 
 **What to do:** Do not stop because p is below .05. With a large sample, look at W instead. If it is close to 1, treat the differences as normal enough and keep going. Also keep in mind that the raincloud plot shows fall and spring scores separately, not the differences. Those raw scores have two peaks, likely because the file mixes grade levels, but subtracting each student's fall score removes that gap. Only a small sample (a few dozen students) with a low W should make you worry.
 
-**Reading the plot.** The raincloud plot has three parts. On the left, each **dot is one student** (spring in one color, fall in the other), and each **gray line connects one student's two scores**, so a line slanting toward the higher score shows that student grew. In the middle, the **box plots** summarize each test: the thick line is the median, the box holds the middle half of students, and the whiskers reach out to the rest. On the right, the **shaded "cloud"** shows the shape of each distribution, where taller means more students at that score. What to look for: is the spring box higher than the fall box, and do most gray lines slant toward spring? The two humps in each cloud are not a problem for this test (see the Test of Normality above). If you made a Descriptives plot instead, each dot is a mean and the bars are its 95% confidence interval.
+**Reading the plot.** The raincloud plot has three parts. On the left, each dot is one student (spring in one color, fall in the other), and each gray line connects one student's two scores, so a line slanting toward the higher score shows that student grew. In the middle, the box plots summarize each test: the thick line is the median, the box holds the middle half of students, and the whiskers reach out to the rest. On the right, the shaded "cloud" shows the shape of each distribution, where taller means more students at that score. What to look for: is the spring box higher than the fall box, and do most gray lines slant toward spring? The two humps in each cloud are not a problem for this test (see the Test of Normality above). If you made a Descriptives plot instead, each dot is a mean and the bars are its 95% confidence interval.
 
-**Putting it together.** Write one sentence for each: (1) How many points did scores change, with the 95% CI? (2) Is it statistically significant? (3) How large is d? Then ask the most important question of this module: **H****ow much of that change would have happened without ARISE?**
+**Putting it together.** Write one sentence for each: (1) How many points did scores change, with the 95% CI? (2) Is it statistically significant? (3) How large is d? Then ask the most important question of this module: *How much of that change would have happened without ARISE?*
 
 **Why this Cohen's d is not comparable.** In a paired t-test, JASP divides the mean change by the standard deviation of students' changes, not of their scores. Students' changes vary much less than their scores do, so this d comes out large. Here the mean gain is about 35 points and the SD of the gains is about 29, so d is about 1.2, which looks "large" by any benchmark. Kraft's benchmarks and the effect sizes in Modules 2 to 10 are on a different scale: SDs of scores, or z-scores. Do not compare this module's d with them. A better check is the z-scores, which remove normal growth for each grade. ARISE students' average z-score barely moved from fall to spring (a change of about −0.06 SD). In other words, they grew about as much as typical Oceanside students in their grades did. The large d is mostly normal growth.
 
@@ -239,8 +239,8 @@ Notice that a very small p-value and a very large d do not protect you from any 
 
 ## Learn more
 
-- *The Effect*, **Chapter 5, Identification:** why an observed change can have many explanations, and how research designs rule them out.
-- *The Effect*, **Chapter 17, Event Studies:** the simplest before-and-after comparison and why you need to predict what would have happened without the event.
+- *The Effect*, Chapter 5, Identification: why an observed change can have many explanations, and how research designs rule them out.
+- *The Effect*, Chapter 17, Event Studies: the simplest before-and-after comparison and why you need to predict what would have happened without the event.
 - *What If* (Hernán and Robins), Chapter 1, sections 1.1 and 1.2: individual and average causal effects, the idea behind the two worlds.
 - *Experimental and Quasi-Experimental Designs* (Shadish, Cook and Campbell), Chapter 4: the one-group pretest-posttest design and the threats that undermine it.
 - *WWC Handbook, Version 5.0*, Chapter I, "Assignment to conditions" (pp. 15 to 16): why the WWC does not review single-group pretest-posttest studies.

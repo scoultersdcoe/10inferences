@@ -12,7 +12,7 @@ You have an untreated group, and the groups differ on a handful of measured char
 
 Regression adjusts for differences by fitting a line. Matching takes a more direct route. For every ARISE student, find comparison students who look exactly the same on the things you measured, and compare only those look-alikes.
 
-Here, "exactly the same" means the same **grade**, **EL status**, **disability status** and **fall placement** (at grade level, 1, 2, or 3+ grade levels below). Each unique combination is a cell, such as "2nd grade, EL, no disability, 1 grade level below." ARISE and comparison students are compared within cells only.
+Here, "exactly the same" means the same **grade**, EL status, disability status and fall placement (at grade level, 1, 2, or 3+ grade levels below). Each unique combination is a cell, such as "2nd grade, EL, no disability, 1 grade level below." ARISE and comparison students are compared within cells only.
 
 Two things happen along the way:
 
@@ -185,7 +185,7 @@ Read it as: in each cell, take the ARISE average minus the comparison average, t
 **Check balance (did matching make the groups alike?)**
 
 5. Click **Regression**, then **Linear Regression**. Put **z\_fall** in **Dependent Variable**, **arise** in **Covariates**, and **em\_weight** in **WLS Weights**. Under **Statistics**, in the **Coefficients** column, tick **Estimates** (usually already ticked) and **Confidence intervals**.
-6. The arise coefficient is now the weighted difference in **fall** scores. After good matching it should be very close to 0. (Remove the weight to see the unmatched difference.)
+6. The arise coefficient is now the weighted difference in fall scores. After good matching it should be very close to 0. (Remove the weight to see the unmatched difference.)
 
 **Balance before and after matching.** This check is an SMD (see Module 3's Get to know the data). Because z\_fall is already in SD units, the arise coefficient is close to the fall-score SMD. Run step 5 twice, without and with the weight:
 
@@ -207,9 +207,9 @@ Figure 9: Linear Regression panel with em\_weight in the WLS Weights box
 
 ## Checkpoints
 
-- The Frequency table shows **7 students** with em\_matched = 0 and **5,577** with em\_matched = 1.
-- After the filter, the regression N is **5,577** (2,109 ARISE and 3,468 comparison).
-- In the balance check (step 6), the weighted arise coefficient for z\_fall is within **0.01 of zero**.
+- The Frequency table shows 7 students with em\_matched = 0 and 5,577 with em\_matched = 1.
+- After the filter, the regression N is 5,577 (2,109 ARISE and 3,468 comparison).
+- In the balance check (step 6), the weighted arise coefficient for z\_fall is within 0.01 of zero.
 
 ## Reading the output
 
@@ -219,20 +219,20 @@ Figure 10: weighted regression Coefficients table
 
 The tables are the same as in Module 3. In the **Coefficients** table, M₁ row **arise**:
 
-- **Unstandardized** = the ARISE minus matched-comparison difference in z\_spring. **Your estimate**, already in SD units.
-- **p** and **95% CI** = the usual tests.
+- **Unstandardized** = the ARISE minus matched-comparison difference in z\_spring. Your estimate, already in SD units.
+- **p** and 95% CI = the usual tests.
 
 **Worked example: the five-step scan (Module 3) on the arise row.**
 
 1. **Sign: positive.** Matched ARISE students scored slightly higher.
 2. **b = 0.008.** Less than one-hundredth of an SD, effectively zero.
-3. **p = .757; 95% CI −0.045 to 0.062.** The CI includes 0, so the difference is not statistically significant.
+3. p = .757; 95% CI −0.045 to 0.062. The CI includes 0, so the difference is not statistically significant.
 4. **β:** skip it. arise is the only predictor, so there is nothing to compare it with.
 5. **R²:** 0.000. arise alone explains essentially none of the spread in spring scores. That is expected: this model is not meant to predict spring scores; the matching does the work.
 
 **One sentence:** Compared with comparison students in the same grade, EL status, disability status and fall placement, ARISE students scored about 0.01 SD higher, a difference too small to distinguish from chance (b = 0.008, 95% CI \[−0.045, 0.062\], p = .757).
 
-Notice that this CI is ***wider** *than Module 3's (−0.015 to 0.043). Matching makes the groups alike, but this model does not use fall scores to explain the spread in spring scores, and the weights make some comparison students count a lot. Both add uncertainty. The two methods agree on the answer, close to zero, but regression is more precise here.
+Notice that this CI is *wider *than Module 3's (−0.015 to 0.043). Matching makes the groups alike, but this model does not use fall scores to explain the spread in spring scores, and the weights make some comparison students count a lot. Both add uncertainty. The two methods agree on the answer, close to zero, but regression is more precise here.
 
 The JASP output may note that a weight was used; that is expected.
 
@@ -273,8 +273,8 @@ Translate the matched estimate into i-Ready points, share of a year's growth or 
 
 ## Learn more
 
-- *The Effect*, **Chapter 14, Matching:** exact and approximate matching, weighting, balance checks and common support.
-- *The Effect*, **Chapter 10, Treatment Effects:** what the "effect on the treated" means and how it differs from an average effect for everyone.
+- *The Effect*, Chapter 14, Matching: exact and approximate matching, weighting, balance checks and common support.
+- *The Effect*, Chapter 10, Treatment Effects: what the "effect on the treated" means and how it differs from an average effect for everyone.
 - *Causal Inference: The Mixtape* (Cunningham), Chapter 5, Matching and Subclassification: subclassification and exact matching, and why matching on many variables runs out of matches.
 - *What If* (Hernán and Robins), Chapter 4, sections 4.4 and 4.5: stratification and matching as forms of adjustment.
 - *Methods Matter* (Murnane and Willett), Chapter 12: stratifying and matching on observed characteristics with education data.

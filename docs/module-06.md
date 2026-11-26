@@ -10,15 +10,15 @@ You have an untreated group, and you observed both groups before and after the p
 - **The trial you wish you had.** A coin flip among schools, which would make the groups alike on everything, measured or not.
 - **The stand-in available.** The comparison group's change over the same period, added to the ARISE group's own starting point.
 
-Modules 2 to 5 could only adjust for differences we **measured**. Difference-in-differences handles differences we **didn't** measure, as long as they stay the same over time.
+Modules 2 to 5 could only adjust for differences we measured. Difference-in-differences handles differences we didn't measure, as long as they stay the same over time.
 
-The idea: compare how much each group **changed** from before the program to after.
+The idea: compare how much each group changed from before the program to after.
 
 1. **First difference:** How much did the ARISE group change from before (2022-24) to after (2024-25)?
 2. **Second difference:** How much did the comparison group change over the same period?
 3. **Difference-in-differences:** Subtract the second from the first.
 
-If ARISE schools always scored 0.10 SD higher than comparison schools, that gap is in both the "before" and "after" numbers, so it cancels out. Anything that affected both groups in 2024-25 (a hard test, a district-wide change) also cancels out. What's left is the change **unique** to ARISE schools after they started ARISE.
+If ARISE schools always scored 0.10 SD higher than comparison schools, that gap is in both the "before" and "after" numbers, so it cancels out. Anything that affected both groups in 2024-25 (a hard test, a district-wide change) also cancels out. What's left is the change unique to ARISE schools after they started ARISE.
 
 |  | Before (2022-24) | After (2024-25) | Change |
 | --- | --- | --- | --- |
@@ -147,7 +147,7 @@ Each school's uₛ shifts its baseline up or down. The model does not report eac
 
 ## Get to know the data
 
-This file is shaped differently from Modules 1 to 5. **Each row is one student in one year**, so a student who was there all three years appears three times. This is called **long format**.
+This file is shaped differently from Modules 1 to 5. Each row is one student in one year, so a student who was there all three years appears three times. This is called **long format**.
 
 **Data dictionary.** The variables you will use in this module.
 
@@ -219,10 +219,10 @@ Figure 15: Linear Mixed Models input panel with school\_id as random effects gro
 
 ## Checkpoints
 
-- Total **N = 17,645** student-years.
-- ANOVA Descriptive Statistics N per cell: **ARISE Pre 4,331, ARISE Post 2,150, Comparison Pre 7,568, Comparison Post 3,596.**
-- By year (Part C): ARISE **2,053 / 2,278 / 2,150**; Comparison **3,757 / 3,811 / 3,596** for 2023 / 2024 / 2025.
-- Mixed model: **13 levels** of school\_id.
+- Total N = 17,645 student-years.
+- ANOVA Descriptive Statistics N per cell: ARISE Pre 4,331, ARISE Post 2,150, Comparison Pre 7,568, Comparison Post 3,596.
+- By year (Part C): ARISE 2,053 / 2,278 / 2,150; Comparison 3,757 / 3,811 / 3,596 for 2023 / 2024 / 2025.
+- Mixed model: 13 levels of school\_id.
 - Your hand-calculated DiD (Part A) should equal the **arise\_x\_post** coefficient (Part B) exactly.
 
 ## Reading the output
@@ -235,13 +235,13 @@ Figure 16: Part B Linear Regression, Coefficients table with arise\_x\_post high
 
 | Analysis | Part | Table to read | Its job |
 | --- | --- | --- | --- |
-| ANOVA | A and C | The descriptives **plot** only | Draw the picture. Ignore its F-tests. |
+| ANOVA | A and C | The descriptives plot only | Draw the picture. Ignore its F-tests. |
 | Linear Regression | B | **Coefficients**, M₁ rows | The DiD (**arise\_x\_post** row), ignoring schools: a check |
 | Linear Mixed Model | D | **Fixed effects estimates** | The DiD accounting for schools: the one to report |
 
 **Reading the plot.** The horizontal axis is time (Pre and Post, or the three years in Part C). Each line is one group, each dot is that group's mean at that time, and the bars are 95% confidence intervals. A helpful trick: from the ARISE Pre dot, imagine a line with the same slope as the comparison line. That is where ARISE would have ended up if it had changed like the comparison group. The vertical gap between that imagined point and the actual ARISE Post dot is the difference-in-differences.
 
-**ANOVA descriptives plot.** Two lines, one per group. **Parallel lines = no DiD effect.** If the ARISE line rises more steeply (or falls less) from Pre to Post, that's a positive DiD. Ignore the ANOVA F-tests here; the plot and the two models are what you need.
+**ANOVA descriptives plot.** Two lines, one per group. Parallel lines = no DiD effect. If the ARISE line rises more steeply (or falls less) from Pre to Post, that's a positive DiD. Ignore the ANOVA F-tests here; the plot and the two models are what you need.
 
 **Regression Coefficients table (M₁).** Use the coefficient table above to name each row. **arise\_x\_post** is your DiD estimate, in SD units, with its CI and p-value.
 
@@ -250,9 +250,9 @@ Figure 16: Part B Linear Regression, Coefficients table with arise\_x\_post high
 | Row | b | What it means |
 | --- | --- | --- |
 | (Intercept) | −0.059 | Comparison schools' average z\_spring before ARISE |
-| arise | 0.109 | How far ahead ARISE schools already were **before** the program. A starting gap, not an effect. |
+| arise | 0.109 | How far ahead ARISE schools already were before the program. A starting gap, not an effect. |
 | post | −0.004 | How much comparison schools changed from before to after: essentially nothing |
-| arise\_x\_post | −0.026 | **The DiD:** ARISE schools changed 0.026 SD *less* than comparison schools |
+| arise\_x\_post | −0.026 | The DiD: ARISE schools changed 0.026 SD *less* than comparison schools |
 
 The five-step scan on arise\_x\_post: (1) negative; (2) b = −0.026 SD, very small; (3) p = .439, 95% CI −0.091 to 0.039, which includes 0; (4) skip β; (5) R² will be small, since this model is not built to predict scores.
 
@@ -260,7 +260,7 @@ The five-step scan on arise\_x\_post: (1) negative; (2) b = −0.026 SD, very sm
 
 **Watch out:** the arise row is significant (p < .001), and it is tempting to read it as an ARISE effect. It is not. It is the gap that existed before ARISE began, which is exactly what DiD subtracts out.
 
-**Parallel trends plot (Part C).** Look at 2023 to 2024, **before** ARISE. Did the two lines move in parallel? If the ARISE line was already rising or falling relative to the comparison line before 2025, the parallel-trends assumption is in doubt.
+**Parallel trends plot (Part C).** Look at 2023 to 2024, before ARISE. Did the two lines move in parallel? If the ARISE line was already rising or falling relative to the comparison line before 2025, the parallel-trends assumption is in doubt.
 
 **Linear mixed model (Part D).** Find the **Fixed effects estimates** table. It has the same four rows as the regression and is read the same way. Ignore the Note under it about sum contrasts: all three predictors are 0/1 numbers, so it does not apply. JASP does not print a CI here; a quick estimate is the estimate ± 2 × SE.
 
@@ -271,8 +271,8 @@ The five-step scan on arise\_x\_post: (1) negative; (2) b = −0.026 SD, very sm
 
 Two things changed, and both are lessons:
 
-- **The arise row's SE grew about eightfold.** The regression treats 17,645 rows as independent pieces of information about how ARISE schools differ from comparison schools. The mixed model knows there are only 13 schools, and its **df of about 11** says so. A gap that looked highly significant is indistinguishable from zero once schools are counted honestly.
-- **The DiD row's SE barely changed, but the estimate moved toward zero.** arise\_x\_post is a change *within* each school, before vs. after, so grouping by school does little to its uncertainty. Because the mixed model gives every school its own baseline, it compares each school with itself, which likely explains why the estimate moved: differences in which schools and students were tested each year matter less.
+- **The arise row's SE grew about eightfold.** The regression treats 17,645 rows as independent pieces of information about how ARISE schools differ from comparison schools. The mixed model knows there are only 13 schools, and its df of about 11 says so. A gap that looked highly significant is indistinguishable from zero once schools are counted honestly.
+- The DiD row's SE barely changed, but the estimate moved toward zero. arise\_x\_post is a change *within* each school, before vs. after, so grouping by school does little to its uncertainty. Because the mixed model gives every school its own baseline, it compares each school with itself, which likely explains why the estimate moved: differences in which schools and students were tested each year matter less.
 
 **One sentence:** Accounting for students being grouped in schools, ARISE schools' spring scores changed about the same as comparison schools' (DiD = −0.003 SD, SE 0.032, p = .935; roughly 95% CI −0.07 to 0.06).
 
@@ -321,8 +321,8 @@ The DiD estimate (arise\_x\_post) is how much more ARISE schools' scores changed
 
 ## Learn more
 
-- *The Effect*, **Chapter 18, Difference-in-Differences:** the logic, parallel trends, testing pre-trends and placebo checks.
-- *The Effect*, **Chapter 16, Fixed Effects:** comparing groups with themselves over time, and why grouping in the data matters.
+- *The Effect*, Chapter 18, Difference-in-Differences: the logic, parallel trends, testing pre-trends and placebo checks.
+- *The Effect*, Chapter 16, Fixed Effects: comparing groups with themselves over time, and why grouping in the data matters.
 - *Causal Inference: The Mixtape* (Cunningham), Chapter 9, Difference-in-Differences: the two-by-two comparison, parallel trends and checks using earlier years.
 - *Mastering 'Metrics* (Angrist and Pischke), Chapter 5, Differences-in-Differences: the logic of the design and its regression version.
 - *Methods Matter* (Murnane and Willett), Chapter 8: difference-in-differences as a natural-experiment design in education, and Chapter 7: why students grouped in schools change the analysis.

@@ -10,7 +10,7 @@ You have an untreated group, and you know where students started: their fall sco
 - **The trial you wish you had.** A coin flip among schools, which would make the groups alike on everything, measured or not.
 - **The stand-in available.** Comparison students who started in the same place on what you measured, compared through a regression model.
 
-Module 2's weakness was that the groups might have started out different. If we know where each student **started** (their fall score) and some background (English learner status, disability status), we can compare ARISE and comparison students who started in the same place. Regression does this "apples to apples" comparison for us. It is called **controlling for**, **adjusting for**, or **holding constant** those variables.
+Module 2's weakness was that the groups might have started out different. If we know where each student started (their fall score) and some background (English learner status, disability status), we can compare ARISE and comparison students who started in the same place. Regression does this "apples to apples" comparison for us. It is called **controlling for**, **adjusting for**, or **holding constant** those variables.
 
 The catch is that a regression can only adjust for what you measured. If ARISE schools differ in something not in the data (teacher quality, principal leadership), regression cannot fix it.
 
@@ -57,7 +57,7 @@ Read it as: among students with the same X, the average spring score without the
 
 ## The design and its model: how regression works
 
-**One predictor.** Picture a scatter plot of fall scores (horizontal) and spring scores (vertical). Regression draws the **straight line that best fits the points**, the line that makes the vertical distances from points to the line as small as possible overall. The line is described by two numbers:
+**One predictor.** Picture a scatter plot of fall scores (horizontal) and spring scores (vertical). Regression draws the straight line that best fits the points, the line that makes the vertical distances from points to the line as small as possible overall. The line is described by two numbers:
 
 
 $$
@@ -70,7 +70,7 @@ $$
 
 **A yes/no predictor.** If the predictor is arise (1 = ARISE, 0 = comparison), the coefficient is simply the difference in average outcome between the two groups, the same number the t-test in Module 2 gave you.
 
-**Several predictors.** Put arise **and** z\_fall **and** el **and** swd in the same model. Now the coefficient on arise means the difference between ARISE and comparison students who had the same fall score, EL status and SWD status. Each coefficient is the effect of that variable with the others held constant.
+**Several predictors.** Put arise and z\_fall and el and swd in the same model. Now the coefficient on arise means the difference between ARISE and comparison students who had the same fall score, EL status and SWD status. Each coefficient is the effect of that variable with the others held constant.
 
 
 $$
@@ -153,7 +153,7 @@ $$
 2. Click **Descriptives**. Move **z\_fall, el, swd** and **z\_spring** into **Variables** and **arise\_group** into **Split**.
 3. Under **Plots**, tick **Distribution plots**.
 
-**What to look for:** This file has 5,584 students, fewer than Module 2's 5,746, because students without a fall score are left out. **el** and **swd** are coded 1 = yes, 0 = no, so their **mean is the share** of students in that category (a mean of 0.25 means 25%). Now the key question: *Did the two groups start in the same place?* If ARISE students had higher fall scores, or fewer English learners, a raw spring difference would be partly about who was in each group. That is exactly what this module's regression adjusts for.
+**What to look for:** This file has 5,584 students, fewer than Module 2's 5,746, because students without a fall score are left out. **el** and **swd** are coded 1 = yes, 0 = no, so their mean is the share of students in that category (a mean of 0.25 means 25%). Now the key question: *Did the two groups start in the same place?* If ARISE students had higher fall scores, or fewer English learners, a raw spring difference would be partly about who was in each group. That is exactly what this module's regression adjusts for.
 
 **Measuring the starting gap: the standardized mean difference (SMD).** To judge whether two groups started in the same place, researchers use the **SMD**: the difference between the two group means, divided by the standard deviation. It is in SD units, so you can compare it across variables, and unlike a p-value it does not grow with sample size. With 5,000 students, a trivial gap can be "significant," but its SMD stays small.
 
@@ -200,8 +200,8 @@ Figure 7. Linear Regression input panel with z\_spring as dependent and four cov
 
 ## Checkpoints
 
-- **N = 5,584** students (check the Descriptives table, or the ANOVA table: Total df = 5,583).
-- In Run 2, the ANOVA table's **Regression df = 4** (four predictors).
+- N = 5,584 students (check the Descriptives table, or the ANOVA table: Total df = 5,583).
+- In Run 2, the ANOVA table's Regression df = 4 (four predictors).
 
 ## Reading the output
 
@@ -219,29 +219,29 @@ JASP shows two models: **M₀** (the "null" model with no predictors) and **M₁
 
 | Column | What it tells you |
 | --- | --- |
-| Unstandardized | The coefficient (b). For arise, the adjusted ARISE vs. comparison difference in z\_spring. **Your estimate.** |
+| Unstandardized | The coefficient (b). For arise, the adjusted ARISE vs. comparison difference in z\_spring. Your estimate. |
 | Standard Error | Its precision |
 | Standardized | The coefficient if all variables were in SD units. For a 0/1 variable like arise, use Unstandardized instead |
 | t, p | Test of whether this coefficient is different from 0 |
 | 95% CI | Plausible range for the coefficient |
 
-Because z\_spring is already in SD units, the arise coefficient **is** an effect size in SD. Compare it with Kraft's benchmarks.
+Because z\_spring is already in SD units, the arise coefficient is an effect size in SD. Compare it with Kraft's benchmarks.
 
 **How to read the arise row: a five-step scan.** Don't chase every number. Read the row of the variable you care about in this order, then write one sentence.
 
 | Step | Where to look | What it tells you | Run 2 example (arise) |
 | --- | --- | --- | --- |
-| 1. Sign | Is the Unstandardized value positive or negative? | The direction: are ARISE students higher or lower? | **Positive.** ARISE students scored slightly higher. |
-| 2. b | Unstandardized | The size, in the outcome's units, holding the other variables constant. Here the outcome is a z-score, so b is in SD units. | **0.014.** About one-hundredth of an SD higher than similar comparison students. |
-| 3. p and CI | p, and the 95% CI Lower and Upper | Could this be chance? If the CI includes 0, you cannot rule out "no difference." | **p = .334; CI −0.015 to 0.043.** The CI includes 0, so this is not statistically significant. |
-| 4. β | Standardized | Compares predictors with each other on one scale. Use it to see which matter most, not to report arise's effect. | **0.007,** tiny next to z\_fall (0.794), swd (−0.085) and el (−0.041). Where students started matters far more. |
+| 1. Sign | Is the Unstandardized value positive or negative? | The direction: are ARISE students higher or lower? | Positive. ARISE students scored slightly higher. |
+| 2. b | Unstandardized | The size, in the outcome's units, holding the other variables constant. Here the outcome is a z-score, so b is in SD units. | 0.014. About one-hundredth of an SD higher than similar comparison students. |
+| 3. p and CI | p, and the 95% CI Lower and Upper | Could this be chance? If the CI includes 0, you cannot rule out "no difference." | p = .334; CI −0.015 to 0.043. The CI includes 0, so this is not statistically significant. |
+| 4. β | Standardized | Compares predictors with each other on one scale. Use it to see which matter most, not to report arise's effect. | 0.007, tiny next to z\_fall (0.794), swd (−0.085) and el (−0.041). Where students started matters far more. |
 | 5. R² | Model Summary, M₁ row | How much of the spread in spring scores the whole model explains. | 0.711. The model explains about 71% of the spread in spring scores, up from 0.2% in Run 1, almost entirely because of z\_fall. |
 
 **One sentence:** After controlling for fall scores, English learner status and disability status, ARISE students scored about 0.01 SD higher than comparison students, a difference too small to distinguish from chance (b = 0.014, 95% CI \[−0.015, 0.043\], p = .334).
 
 Use the same scan on any regression row in later modules: sign, b, p and CI, β, R², then one sentence.
 
-**Compare Run 1 and Run 2.** What happened to the arise coefficient? A big drop means the raw difference in Module 2 was mostly about where students started, not ARISE. For example, in Run 1 (arise alone, no adjustment) the ARISE difference was 0.079 SD (p = .004). After adjusting for fall scores, English learner status and disability status, it fell to 0.014 SD, which is not statistically significant. About 80% of the raw gap reflected where students started, not ARISE. **The lesson:** a difference can be "significant" simply because the groups were different to begin with. Always ask whether you are comparing students who started in the same place.
+**Compare Run 1 and Run 2.** What happened to the arise coefficient? A big drop means the raw difference in Module 2 was mostly about where students started, not ARISE. For example, in Run 1 (arise alone, no adjustment) the ARISE difference was 0.079 SD (p = .004). After adjusting for fall scores, English learner status and disability status, it fell to 0.014 SD, which is not statistically significant. About 80% of the raw gap reflected where students started, not ARISE. The lesson: a difference can be "significant" simply because the groups were different to begin with. Always ask whether you are comparing students who started in the same place.
 
 **Reading the plot.** A **residual** is a student's actual spring score minus the score the model predicted, so it is the model's miss for that student. In the **residuals vs. predicted** plot, each dot is one student, where the horizontal axis is the predicted score and the vertical axis is the miss. Dots above the zero line scored higher than predicted; dots below scored lower. In the **Q-Q plot**, each dot compares a residual's actual position with where it would fall if the residuals were perfectly bell-shaped. If they are, the dots follow the diagonal line. Dots bending away at the ends mean more extreme misses than a bell curve would have.
 
@@ -281,7 +281,7 @@ The causal assumption, which matters most:
 
 1. Report the arise coefficient, CI and p-value from both runs. How much did it change?
 2. Look at the z\_fall coefficient. What does it say about how strongly fall predicts spring?
-3. Name a variable **not** in this data that could differ between ARISE and comparison schools and affect reading.
+3. Name a variable not in this data that could differ between ARISE and comparison schools and affect reading.
 4. Do you trust Run 2 more than Module 2? Why, and how much?
 5. **Back to the two worlds.** In the running example, what did regression put in place of Ava's missing Y₀? Compare it with her true Y₀ of 482, and explain why this stand-in is so much closer than the one posttest-only used in Module 2.
 6. Suppose ARISE had no effect at all, so every student's Y₁ equals their Y₀. Roughly what would regression report in the running example? Why would the answer be close to zero but not exactly zero?
@@ -290,8 +290,8 @@ The causal assumption, which matters most:
 
 ## Learn more
 
-- *The Effect*, **Chapter 4, Describing Relationships:** line-fitting and what "controlling for" a variable does.
-- *The Effect*, **Chapter 13, Regression:** reading regression tables, controls, and the assumptions of regression.
+- *The Effect*, Chapter 4, Describing Relationships: line-fitting and what "controlling for" a variable does.
+- *The Effect*, Chapter 13, Regression: reading regression tables, controls, and the assumptions of regression.
 - *Mastering 'Metrics* (Angrist and Pischke), Chapter 2, Regression: regression as an automatic way of comparing like with like, and how adding a control can shrink a gap.
 - *Causal Inference: The Mixtape* (Cunningham), Chapter 2, Probability and Regression Review: the mechanics of least squares and what "holding constant" means.
 - *What If* (Hernán and Robins), Chapter 15, section 15.1, Outcome regression: using a model of the outcome to adjust for measured confounders.

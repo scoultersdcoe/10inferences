@@ -10,14 +10,14 @@ You have only the program group, but you have many measurements of it from befor
 - **The trial you wish you had.** A coin flip among schools, which would give you an untreated group living through the same years.
 - **The stand-in available.** The ARISE schools' own trend from before the program, projected forward.
 
-Module 1 compared one "before" point with one "after" point, so it could not tell normal growth from a program effect. An interrupted time series uses **many** points before the program to learn the group's normal **trend**, then asks whether the program **interrupted** that trend.
+Module 1 compared one "before" point with one "after" point, so it could not tell normal growth from a program effect. An interrupted time series uses many points before the program to learn the group's normal trend, then asks whether the program interrupted that trend.
 
 The stand-in for "what would have happened" is the pre-program trend, extended forward. The program's effect shows up in two possible ways:
 
 - **A level change (a jump):** right when the program starts, the outcome jumps up or down from where the trend predicted.
 - **A slope change:** after the program starts, the outcome climbs (or falls) faster or slower than before.
 
-In this module, each row is one **test window** (fall, winter or spring of a school year), and the outcome is the **average** score of all students in the four ARISE schools. There are 12 windows: 6 before ARISE (2022-23 and 2023-24) and 6 after (2024-25 and 2025-26). ARISE starts at window 7.
+In this module, each row is one **test window** (fall, winter or spring of a school year), and the outcome is the average score of all students in the four ARISE schools. There are 12 windows: 6 before ARISE (2022-23 and 2023-24) and 6 after (2024-25 and 2025-26). ARISE starts at window 7.
 
 ## Picture the design: filling in the missing world
 
@@ -67,7 +67,7 @@ Segmented regression fits one line before the program and lets it jump and bend 
 
 | Variable | What it is | Its coefficient means |
 | --- | --- | --- |
-| time | Window number, 1 to 12 | The trend **before** the program (change per window) |
+| time | Window number, 1 to 12 | The trend before the program (change per window) |
 | post | 0 before window 7, 1 from window 7 on | The **level change**: the jump at the start of ARISE |
 | time\_after | 0 before window 7, then 0, 1, 2, … 5 | The **slope change**: how much the trend per window changed after ARISE |
 
@@ -90,11 +90,11 @@ The trend after the program is b1 + b3.
 
 **Why run both?** As a check. The two outcomes handle normal growth and the seasons in different ways. If both tell the same story about the level and slope changes, your conclusion does not depend on which outcome you chose. If they disagree, one of them is probably picking up something other than ARISE, and you need to find out which.
 
-**Why raw scores need season terms.** Raw scores follow a zig-zag every year: lowest in fall, higher in winter, highest in spring, then back down the next fall as students move up a grade. In this file, the average winter score is about 15 points above fall, and spring is about 29 points above fall. Segmented regression draws **straight** lines, so it cannot follow a zig-zag on its own. Worse, ARISE starts at window 7, which is a **fall** test, so scores drop right at the start of the program no matter what. Without help, the model blames that seasonal drop on ARISE.
+**Why raw scores need season terms.** Raw scores follow a zig-zag every year: lowest in fall, higher in winter, highest in spring, then back down the next fall as students move up a grade. In this file, the average winter score is about 15 points above fall, and spring is about 29 points above fall. Segmented regression draws straight lines, so it cannot follow a zig-zag on its own. Worse, ARISE starts at window 7, which is a fall test, so scores drop right at the start of the program no matter what. Without help, the model blames that seasonal drop on ARISE.
 
 The fix is two yes/no predictors: **winter** (1 for winter windows, 0 otherwise) and **spring** (1 for spring windows, 0 otherwise). Fall is the baseline. Their coefficients are the usual winter and spring bumps above fall, so time, post and time\_after measure only what is left after the normal seasonal pattern is set aside. The cost: with only 12 points, two extra predictors use up information and leave just 6 points' worth to estimate everything else.
 
-**Why z-scores don't need them.** Each z-score is already compared with students in the same grade **and season**, so the seasonal rise is removed before the model ever sees it. That is why Part B has three predictors and Part C has five.
+**Why z-scores don't need them.** Each z-score is already compared with students in the same grade and season, so the seasonal rise is removed before the model ever sees it. That is why Part B has three predictors and Part C has five.
 
 **Autocorrelation.** Points next to each other in time tend to be similar. Regression assumes they are independent, so with autocorrelated data, p-values look too small. The **Durbin-Watson** statistic checks this, where values near 2 are fine; values well below 2 suggest positive autocorrelation.
 
@@ -150,7 +150,7 @@ Here eₜ is the residual in window t, and r is the correlation between neighbor
 
 ## Get to know the data
 
-This file is tiny: **12 rows, and each row is one testing window**, not a student. Each value is an average across all students tested in that window. With this little data, you can (and should) look at every row.
+This file is tiny: 12 rows, and each row is one testing window, not a student. Each value is an average across all students tested in that window. With this little data, you can (and should) look at every row.
 
 **Data dictionary.** The variables you will use in this module. Each row is a test window, so each value describes the four ARISE schools in that window.
 
@@ -209,9 +209,9 @@ Figure 17: scatter plot of mean\_z by time with a hand-drawn line at window 7
 
 ## Checkpoints
 
-- The data have **12 rows**; **post** first equals 1 at **wave 7** (fall 2024-25).
-- Part B: the ANOVA table shows **Regression df = 3** and **Residual df = 8**.
-- Part C: **Regression df = 5** and **Residual df = 6**.
+- The data have 12 rows; **post** first equals 1 at wave 7 (fall 2024-25).
+- Part B: the ANOVA table shows Regression df = 3 and Residual df = 8.
+- Part C: Regression df = 5 and Residual df = 6.
 - In Part C, the **winter** and **spring** coefficients should be clearly positive (scores rise through the year).
 
 ## Reading the output
@@ -225,8 +225,8 @@ In the **Coefficients** table (M₁ rows):
 | Row | Ask yourself |
 | --- | --- |
 | time | What was the trend per window before ARISE? Rising, falling, flat? |
-| post | Did scores **jump** at the start of ARISE? (In SD units for Part B) |
-| time\_after | Did the trend per window **change** after ARISE? |
+| post | Did scores jump at the start of ARISE? (In SD units for Part B) |
+| time\_after | Did the trend per window change after ARISE? |
 
 For each, read the estimate, its 95% CI and p. With only 12 points, CIs will be wide; a large estimate can still be uncertain.
 
@@ -245,7 +245,7 @@ For each, read the estimate, its 95% CI and p. With only 12 points, CIs will be 
 
 Both models say the same thing about direction. Namely, scores were drifting down before ARISE, there was no clear jump when it started, and the trend turned upward afterward (in Part C, from −2.7 to about +2.2 points per window). They disagree only on whether the turnaround is "significant," and with 12 points, one model crossing p = .05 and the other not is a thin difference. Read this as a hint of a change in trend, not proof.
 
-**Why the outcome matters: a warning.** If you run Part C *without* winter and spring, the post estimate becomes about **−19 points**, the opposite sign. Window 7 is a fall test, and raw scores drop every fall no matter what. Without the season terms, the model blames that seasonal drop on ARISE. z-scores compare each window with its own norm, so they remove most of the season automatically. With raw scores, you must model the season yourself, or you can get the answer backwards.
+**Why the outcome matters: a warning.** If you run Part C *without* winter and spring, the post estimate becomes about −19 points, the opposite sign. Window 7 is a fall test, and raw scores drop every fall no matter what. Without the season terms, the model blames that seasonal drop on ARISE. z-scores compare each window with its own norm, so they remove most of the season automatically. With raw scores, you must model the season yourself, or you can get the answer backwards.
 
 **Remember the threats.** Even a real change in trend at window 7 could come from anything else that changed that year (history). Module 8 adds a comparison group to check exactly this.
 
@@ -258,7 +258,7 @@ Figure 18. scatter plot of mean\_z by time with two lines drawn at post 0 and po
 **Reading the Flexplot.** The two straight lines are exactly what the Part B regression estimates. You can also work them out from the coefficients: before ARISE, predicted mean\_z = 0.147 − 0.0185 × time, which runs from about 0.13 at window 1 to 0.04 at window 6. After ARISE, add post (+0.055) and time\_after (+0.023 per window after window 7), which runs from about 0.07 at window 7 to 0.10 at window 12.
 
 - **What would have happened:** imagine the "before" line continuing past window 6. It would reach about 0.02 at window 7. The gap between that point and the start of the "after" line (0.07) is the **level change**; the after line rising instead of falling is the **slope change**.
-- **Watch the single points.** The steep "before" line is driven mostly by **window 6**, which sits near 0; windows 1 to 5 decline only gently. Likewise, **window 9** pulls the "after" line down. Both are spring windows, so the z-scores may not remove the seasonal pattern completely. With only 12 points, one or two unusual windows can create or erase a trend. Always look at the points, not just the lines.
+- **Watch the single points.** The steep "before" line is driven mostly by window 6, which sits near 0; windows 1 to 5 decline only gently. Likewise, window 9 pulls the "after" line down. Both are spring windows, so the z-scores may not remove the seasonal pattern completely. With only 12 points, one or two unusual windows can create or erase a trend. Always look at the points, not just the lines.
 
 ## Explaining it to stakeholders
 
@@ -298,7 +298,7 @@ Each row in this file is a school average, but mean\_z is still in student-level
 
 ## Learn more
 
-- *The Effect*, **Chapter 17, Event Studies:** using the period before an event to predict what would have happened, and measuring the deviation from that prediction. ITS applies the same logic.
+- *The Effect*, Chapter 17, Event Studies: using the period before an event to predict what would have happened, and measuring the deviation from that prediction. ITS applies the same logic.
 - *Experimental and Quasi-Experimental Designs* (Shadish, Cook and Campbell), Chapter 6, Interrupted Time-Series Designs: the simple time series and the threats that matter most for it.
 - *WWC Handbook, Version 5.0*, Chapter I, "Assignment to conditions" (p. 16): why the WWC does not yet review time series designs without a comparison group.
 

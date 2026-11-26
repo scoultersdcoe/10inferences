@@ -28,15 +28,15 @@ Most of the source texts go well beyond this course. These are the chapters that
 
 ### [Module 1: One-group pre-post](module-01.md#learn-more)
 
-- *The Effect*, **Chapter 5, Identification:** why an observed change can have many explanations, and how research designs rule them out.
-- *The Effect*, **Chapter 17, Event Studies:** the simplest before-and-after comparison and why you need to predict what would have happened without the event.
+- *The Effect*, Chapter 5, Identification: why an observed change can have many explanations, and how research designs rule them out.
+- *The Effect*, Chapter 17, Event Studies: the simplest before-and-after comparison and why you need to predict what would have happened without the event.
 - *What If* (Hernán and Robins), Chapter 1, sections 1.1 and 1.2: individual and average causal effects, the idea behind the two worlds.
 - *Experimental and Quasi-Experimental Designs* (Shadish, Cook and Campbell), Chapter 4: the one-group pretest-posttest design and the threats that undermine it.
 - *WWC Handbook, Version 5.0*, Chapter I, "Assignment to conditions" (pp. 15 to 16): why the WWC does not review single-group pretest-posttest studies.
 
 ### [Module 2: Posttest-only comparison](module-02.md#learn-more)
 
-- *The Effect*, **Chapter 6, Causal Diagrams,** and **Chapter 8, Causal Paths and Closing Back Doors:** how a third factor, such as which schools volunteer, can create a difference between groups that the program did not cause.
+- *The Effect*, Chapter 6, Causal Diagrams, and Chapter 8, Causal Paths and Closing Back Doors: how a third factor, such as which schools volunteer, can create a difference between groups that the program did not cause.
 - *Causal Inference: The Mixtape* (Cunningham), Chapter 4, Potential Outcomes Causal Model: the same split of a simple comparison into the effect and selection bias.
 - *Mastering 'Metrics* (Angrist and Pischke), Chapter 1, Randomized Trials: the opening sections show how comparing people who chose differently mixes the effect with selection bias.
 - *Experimental and Quasi-Experimental Designs* (Shadish, Cook and Campbell), Chapter 4: the posttest-only design with nonequivalent groups.
@@ -45,8 +45,8 @@ Most of the source texts go well beyond this course. These are the chapters that
 
 ### [Module 3: Regression adjustment](module-03.md#learn-more)
 
-- *The Effect*, **Chapter 4, Describing Relationships:** line-fitting and what "controlling for" a variable does.
-- *The Effect*, **Chapter 13, Regression:** reading regression tables, controls, and the assumptions of regression.
+- *The Effect*, Chapter 4, Describing Relationships: line-fitting and what "controlling for" a variable does.
+- *The Effect*, Chapter 13, Regression: reading regression tables, controls, and the assumptions of regression.
 - *Mastering 'Metrics* (Angrist and Pischke), Chapter 2, Regression: regression as an automatic way of comparing like with like, and how adding a control can shrink a gap.
 - *Causal Inference: The Mixtape* (Cunningham), Chapter 2, Probability and Regression Review: the mechanics of least squares and what "holding constant" means.
 - *What If* (Hernán and Robins), Chapter 15, section 15.1, Outcome regression: using a model of the outcome to adjust for measured confounders.
@@ -54,8 +54,8 @@ Most of the source texts go well beyond this course. These are the chapters that
 
 ### [Module 4: Exact matching](module-04.md#learn-more)
 
-- *The Effect*, **Chapter 14, Matching:** exact and approximate matching, weighting, balance checks and common support.
-- *The Effect*, **Chapter 10, Treatment Effects:** what the "effect on the treated" means and how it differs from an average effect for everyone.
+- *The Effect*, Chapter 14, Matching: exact and approximate matching, weighting, balance checks and common support.
+- *The Effect*, Chapter 10, Treatment Effects: what the "effect on the treated" means and how it differs from an average effect for everyone.
 - *Causal Inference: The Mixtape* (Cunningham), Chapter 5, Matching and Subclassification: subclassification and exact matching, and why matching on many variables runs out of matches.
 - *What If* (Hernán and Robins), Chapter 4, sections 4.4 and 4.5: stratification and matching as forms of adjustment.
 - *Methods Matter* (Murnane and Willett), Chapter 12: stratifying and matching on observed characteristics with education data.
@@ -63,7 +63,7 @@ Most of the source texts go well beyond this course. These are the chapters that
 
 ### [Module 5: Propensity score matching](module-05.md#learn-more)
 
-- *The Effect*, **Chapter 14, Matching:** propensity scores, choosing matches, calipers, balance tables and common support.
+- *The Effect*, Chapter 14, Matching: propensity scores, choosing matches, calipers, balance tables and common support.
 - *Causal Inference: The Mixtape* (Cunningham), Chapter 5, Matching and Subclassification: propensity score methods, common support and balance.
 - *What If* (Hernán and Robins), Chapter 15, sections 15.2 to 15.4: propensity scores, and stratifying and matching on them.
 - *Methods Matter* (Murnane and Willett), Chapter 12: propensity scores in education research, and what they cannot fix.
@@ -71,8 +71,8 @@ Most of the source texts go well beyond this course. These are the chapters that
 
 ### [Module 6: Difference-in-differences](module-06.md#learn-more)
 
-- *The Effect*, **Chapter 18, Difference-in-Differences:** the logic, parallel trends, testing pre-trends and placebo checks.
-- *The Effect*, **Chapter 16, Fixed Effects:** comparing groups with themselves over time, and why grouping in the data matters.
+- *The Effect*, Chapter 18, Difference-in-Differences: the logic, parallel trends, testing pre-trends and placebo checks.
+- *The Effect*, Chapter 16, Fixed Effects: comparing groups with themselves over time, and why grouping in the data matters.
 - *Causal Inference: The Mixtape* (Cunningham), Chapter 9, Difference-in-Differences: the two-by-two comparison, parallel trends and checks using earlier years.
 - *Mastering 'Metrics* (Angrist and Pischke), Chapter 5, Differences-in-Differences: the logic of the design and its regression version.
 - *Methods Matter* (Murnane and Willett), Chapter 8: difference-in-differences as a natural-experiment design in education, and Chapter 7: why students grouped in schools change the analysis.
@@ -80,22 +80,22 @@ Most of the source texts go well beyond this course. These are the chapters that
 
 ### [Module 7: Interrupted time series](module-07.md#learn-more)
 
-- *The Effect*, **Chapter 17, Event Studies:** using the period before an event to predict what would have happened, and measuring the deviation from that prediction. ITS applies the same logic.
+- *The Effect*, Chapter 17, Event Studies: using the period before an event to predict what would have happened, and measuring the deviation from that prediction. ITS applies the same logic.
 - *Experimental and Quasi-Experimental Designs* (Shadish, Cook and Campbell), Chapter 6, Interrupted Time-Series Designs: the simple time series and the threats that matter most for it.
 - *WWC Handbook, Version 5.0*, Chapter I, "Assignment to conditions" (p. 16): why the WWC does not yet review time series designs without a comparison group.
 
 ### [Module 8: Comparative interrupted time series](module-08.md#learn-more)
 
-- *The Effect*, **Chapter 17, Event Studies,** and **Chapter 18, Difference-in-Differences:** combining a before-and-after comparison with an untreated group, and checking for differences in prior trends.
+- *The Effect*, Chapter 17, Event Studies, and Chapter 18, Difference-in-Differences: combining a before-and-after comparison with an untreated group, and checking for differences in prior trends.
 - *Experimental and Quasi-Experimental Designs* (Shadish, Cook and Campbell), Chapter 6, Interrupted Time-Series Designs: adding a no-treatment control series and why it answers the history threat.
 - *Causal Inference: The Mixtape*, Chapter 9, Difference-in-Differences: the parallel trends idea that CITS extends to whole trends.
 - *WWC Handbook, Version 5.0*, Chapter I, "Assignment to conditions" (p. 15): comparative interrupted time series reviewed as quasi-experimental designs.
 
 ### [Module 9: Regression discontinuity](module-09.md#learn-more)
 
-- *The Effect*, **Chapter 20, Regression Discontinuity:** running variables, bandwidths, fuzzy RDD and checks for manipulation and balance.
-- *The Effect*, **Chapter 19, Instrumental Variables:** the logic behind dividing by the first stage in a fuzzy RDD.
-- *The Effect*, **Chapter 10, Treatment Effects:** why an RDD estimate is local to people near the cutoff.
+- *The Effect*, Chapter 20, Regression Discontinuity: running variables, bandwidths, fuzzy RDD and checks for manipulation and balance.
+- *The Effect*, Chapter 19, Instrumental Variables: the logic behind dividing by the first stage in a fuzzy RDD.
+- *The Effect*, Chapter 10, Treatment Effects: why an RDD estimate is local to people near the cutoff.
 - *Causal Inference: The Mixtape*, Chapter 6, Regression Discontinuity: continuity, sharp and fuzzy designs, bandwidths and the density test.
 - *Causal Inference: The Mixtape*, Chapter 7, Instrumental Variables: compliers, monotonicity and why the ratio estimates a LATE.
 - *Mastering 'Metrics*, Chapter 4, Regression Discontinuity Designs: a plain-language tour with worked examples.
@@ -106,8 +106,8 @@ Most of the source texts go well beyond this course. These are the chapters that
 
 ### [Module 10: Randomized controlled trial](module-10.md#learn-more)
 
-- *The Effect*, **Chapter 9, Finding Front Doors:** why randomized experiments remove back-door paths, and their practical limits.
-- *The Effect*, **Chapter 15, Simulation:** how researchers create data with a known effect, as your instructor did for Modules 9 and 10, to test whether a method works.
+- *The Effect*, Chapter 9, Finding Front Doors: why randomized experiments remove back-door paths, and their practical limits.
+- *The Effect*, Chapter 15, Simulation: how researchers create data with a known effect, as your instructor did for Modules 9 and 10, to test whether a method works.
 - *What If*, Chapter 2, Randomized Experiments: why randomization gives exchangeability, including conditional randomization within blocks.
 - *Mastering 'Metrics*, Chapter 1, Randomized Trials: selection bias and how a coin flip removes it, with a worked health insurance example.
 - *Methods Matter*, Chapters 4, 6 and 7: designing a randomized experiment in education, the challenges of carrying one out, and statistical power.

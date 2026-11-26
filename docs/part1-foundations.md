@@ -1,6 +1,6 @@
 # Part 1: Foundations
 
-Every design in this course tries to answer the same question: **W****hat would have happened without the program?** Read this part before Module 1 and come back to it often.
+Every design in this course tries to answer the same question: *What would have happened without the program?* Read this part before Module 1 and come back to it often.
 
 ## What is a causal effect?
 
@@ -52,7 +52,7 @@ For the three ARISE students, the average Y₁ is 505 and the average Y₀ is 50
 
 Half of the spring outcomes are question marks, and that is true of every study, always. Fall scores are known for everyone because they were measured before ARISE began. This is why causal inference is really a **missing-data problem**. To estimate ARISE's effect, we must fill in the ? for Ava, Ben and Cruz (what they would have scored without ARISE) using something we *can* observe. That something is the stand-in for the counterfactual.
 
-Since we cannot see the counterfactual, every design in this course **builds a stand-in for it**. Which stand-in you can build depends on the problem you face. Each module starts from one of these problems:
+Since we cannot see the counterfactual, every design in this course builds a stand-in for it. Which stand-in you can build depends on the problem you face. Each module starts from one of these problems:
 
 | Module | The problem you face | The stand-in for "without the program" | What must be true to believe it | Design |
 | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@ The better the stand-in matches the true counterfactual, the more you can trust 
 
 ## Comparison groups and selection bias
 
-A **comparison group** (or control group) is a group that did not get the program. Comparing the program group to them seems simple, but there is a catch; notably, **people or schools that join programs are often different from those that don't.** A principal who volunteers for a new literacy program may also have stronger teachers, more motivated families, or a bigger budget. If you see a difference later, you cannot tell whether the program caused it or those pre-existing differences did. This is called **selection bias**, and most of this course is about dealing with it.
+A **comparison group** (or control group) is a group that did not get the program. Comparing the program group to them seems simple, but there is a catch; notably, people or schools that join programs are often different from those that don't. A principal who volunteers for a new literacy program may also have stronger teachers, more motivated families, or a bigger budget. If you see a difference later, you cannot tell whether the program caused it or those pre-existing differences did. This is called **selection bias**, and most of this course is about dealing with it.
 
 ## What must be true: three conditions
 
@@ -146,7 +146,7 @@ Read it from left to right. The left side is what the data give you: the program
 
 The split comes from one move: add and subtract that missing E\[Y₀ ∣ D = 1\]. Adding and subtracting the same amount changes nothing, but it separates the part you want from the part that gets in the way. In the running example, 505 − 470 = (505 − 500) + (500 − 470), so 35 = 5 + 30. The 30 points are the head start you will meet in Module 2. The Mixtape (Chapter 4) writes the same split with the ATE and one more term for when effects differ between groups. The idea is the same.
 
-**Every design is a plan for the selection-bias term.**
+Every design is a plan for the selection-bias term.
 
 | Design | How it deals with selection bias |
 | --- | --- |
@@ -172,16 +172,16 @@ The standard error (SE) is the typical size of that bounce. The t statistic coun
 
 These answer two different questions, and you need both.
 
-**Statistical significance (the p-value) asks: Could this difference just be luck?** Even if a program does nothing, two groups of students will never score exactly the same. The p-value is the probability of seeing a difference at least this big *if the program truly had no effect*. Think of a p-value like a smoke alarm. If the p-value is below .05, the alarm goes off, and the difference is too big to easily blame on luck. If it’s above .05, the alarm stays quiet, and luck could explain the difference, but that doesn’t prove there’s no fire.
+**Statistical significance** (the p-value) asks: *Could this difference just be luck?* Even if a program does nothing, two groups of students will never score exactly the same. The p-value is the probability of seeing a difference at least this big *if the program truly had no effect*. Think of a p-value like a smoke alarm. If the p-value is below .05, the alarm goes off, and the difference is too big to easily blame on luck. If it’s above .05, the alarm stays quiet, and luck could explain the difference, but that doesn’t prove there’s no fire.
 
-- A small p-value (by convention, **p < .05**) means "this would be surprising if there were no effect." We call it statistically significant.
+- A small p-value (by convention, p < .05) means "this would be surprising if there were no effect." We call it statistically significant.
 - A large p-value means the difference could easily be chance.
-- A p-value does **not** tell you how big or important the effect is. With thousands of students, even a tiny, meaningless difference can have p < .001.
-- A p-value does **not** tell you whether the design is trustworthy. A biased comparison can produce a very small p-value.
+- A p-value does not tell you how big or important the effect is. With thousands of students, even a tiny, meaningless difference can have p < .001.
+- A p-value does not tell you whether the design is trustworthy. A biased comparison can produce a very small p-value.
 
-**The confidence interval (CI) shows a plausible range for the effect.** A 95% CI of 0.02 to 0.14 means the true effect is plausibly anywhere in that range. If the interval includes 0, the result is not statistically significant. A wide interval means you have little precision.
+The **confidence interval (CI)** shows a plausible range for the effect. A 95% CI of 0.02 to 0.14 means the true effect is plausibly anywhere in that range. If the interval includes 0, the result is not statistically significant. A wide interval means you have little precision.
 
-**Practical significance (the effect size) asks: Is the difference big enough to matter?** In this course most outcomes are on a **standard deviation (SD) scale**, which makes effects comparable across grades and tests. You will see this as a z-score difference or as Cohen's *d*. An effect of 0.10 SD means the program moved the average student about one-tenth of a standard deviation.
+**Practical significance** (the effect size) asks: *Is the difference big enough to matter?* In this course most outcomes are on a **standard deviation (SD) scale**, which makes effects comparable across grades and tests. You will see this as a z-score difference or as Cohen's *d*. An effect of 0.10 SD means the program moved the average student about one-tenth of a standard deviation.
 
 Going back to the smoke alarm analogy. The alarm tells you there’s probably a fire, but not how big it is. That’s the effect size’s job. A small effect is a candle; a large effect is a bonfire. There are a dozen or so types of effect sizes, and many have their own rules for what counts as small or large. In education, real programs rarely produce bonfires. An effect of 0.10 SD is often a meaningful result, and 0.20 or more is considered large. The key idea is a larger effect means a bigger difference between the two groups we are comparing.
 
@@ -193,7 +193,7 @@ How big is big? Effects of real school programs are usually much smaller than ol
 | 0.05 to 0.19 | Medium |
 | 0.20 or more | Large |
 
-The median effect in those studies was about 0.10 SD. Use these benchmarks in every module, and always report **both** the p-value and the effect size.
+The median effect in those studies was about 0.10 SD. Use these benchmarks in every module, and always report both the p-value and the effect size.
 
 ## Reading a result that is not significant
 
