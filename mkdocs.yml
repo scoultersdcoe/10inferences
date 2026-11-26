@@ -2,7 +2,7 @@ site_name: "10 Inferences: Causal Designs in JASP"
 site_description: A problem-first guide to causal research designs, worked in JASP with data from the ARISE literacy program.
 site_author: Shannon Coulter
 # Set this to your Pages address, e.g. https://<user>.github.io/<repo>/
-# site_url: https://example.github.io/10-inferences/
+site_url: https://scoultersdcoe.github.io/10inferences/
 copyright: "© 2026 Shannon Coulter"
 use_directory_urls: false
 

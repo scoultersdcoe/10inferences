@@ -1,5 +1,7 @@
 # 10 Inferences: Causal Designs in JASP
 
+**Read the book:** https://scoultersdcoe.github.io/10inferences/
+
 The source for the online book. Each module of the student manual is one chapter; the site is built with [MkDocs](https://www.mkdocs.org) and the [Material](https://squidfunk.github.io/mkdocs-material/) theme, with equations typeset by MathJax.
 
 ## Layout
