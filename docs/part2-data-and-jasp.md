@@ -26,7 +26,7 @@ ARISE schools chose to adopt the program; it was not assigned at random. Keep th
 | score\_fall, score\_spring | i-Ready **scale score**, roughly 200 to 750 | When everyone is in one grade, or for raw growth |
 | z\_fall, z\_spring | **z-score**: the scale score compared with all Oceanside students in the same grade and season in 2022-23 | When comparing students across grades |
 
-Scale scores rise with grade, so an average kindergartner scores near 390 in spring and an average 5th grader near 565. If one group has more older students, its raw average looks higher for that reason alone. A **z-score **fixes this issue. A z of 0 means "average for your grade," +1 means one standard deviation above average, and -0.5 means half a standard deviation below. A difference in z-scores between groups is already an effect size in SD units.
+Scale scores rise with grade, so an average kindergartner scores near 390 in spring and an average 5th grader near 565. If one group has more older students, its raw average looks higher for that reason alone. A **z-score** fixes this issue. A z of 0 means "average for your grade," +1 means one standard deviation above average, and -0.5 means half a standard deviation below. A difference in z-scores between groups is already an effect size in SD units.
 
 **Translating z-score results into real-world terms.** A difference in z-scores is in SD units, which researchers can compare across studies but most people cannot picture. When you report a result to a principal, a school board or families, translate it. The first table gives the conversions for this data. Scale the last two columns to your own estimate, so an effect of 0.20 SD is twice the 0.10 SD column.
 

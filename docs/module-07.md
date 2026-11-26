@@ -12,7 +12,7 @@ You have only the program group, but you have many measurements of it from befor
 
 Module 1 compared one "before" point with one "after" point, so it could not tell normal growth from a program effect. An interrupted time series uses **many** points before the program to learn the group's normal **trend**, then asks whether the program **interrupted** that trend.
 
-The stand-in for "what would have happened" is the pre-program trend**, extended forward**. The program's effect shows up in two possible ways:
+The stand-in for "what would have happened" is the pre-program trend, extended forward. The program's effect shows up in two possible ways:
 
 - **A level change (a jump):** right when the program starts, the outcome jumps up or down from where the trend predicted.
 - **A slope change:** after the program starts, the outcome climbs (or falls) faster or slower than before.

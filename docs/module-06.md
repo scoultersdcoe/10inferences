@@ -18,7 +18,7 @@ The idea: compare how much each group **changed** from before the program to aft
 2. **Second difference:** How much did the comparison group change over the same period?
 3. **Difference-in-differences:** Subtract the second from the first.
 
-If ARISE schools always scored 0.10 SD higher than comparison schools, that gap is in both the "before" and "after" numbers, so it cancels out. Anything that affected both groups in 2024-25 (a hard test, a district-wide change) also cancels out. What's left is the change **unique **to ARISE schools after they started ARISE.
+If ARISE schools always scored 0.10 SD higher than comparison schools, that gap is in both the "before" and "after" numbers, so it cancels out. Anything that affected both groups in 2024-25 (a hard test, a district-wide change) also cancels out. What's left is the change **unique** to ARISE schools after they started ARISE.
 
 |  | Before (2022-24) | After (2024-25) | Change |
 | --- | --- | --- | --- |
@@ -26,7 +26,7 @@ If ARISE schools always scored 0.10 SD higher than comparison schools, that gap 
 | Comparison | C | D | D − C |
 |  |  | **DiD** | **(B − A) − (D − C)** |
 
-**The key assumption is parallel trends. **Without ARISE, the two groups' scores would have moved in parallel (changed by the same amount). The comparison group's change stands in for what the ARISE group's change would have been.
+**The key assumption is parallel trends.** Without ARISE, the two groups' scores would have moved in parallel (changed by the same amount). The comparison group's change stands in for what the ARISE group's change would have been.
 
 ## Picture the design: filling in the missing world
 
@@ -192,7 +192,9 @@ This file is shaped differently from Modules 1 to 5. **Each row is one student i
 5. Open **Descriptives Plots**. Put **period** on the **Horizontal Axis** and **arise\_group** in **Separate Lines**. Tick **Display error bars** (confidence intervals).
 6. Use the Descriptive Statistics table to fill in the 2×2 table (A, B, C, D) and compute the DiD by hand.
 
-![JASP output screenshot](img/fig058.png)Figure 14: ANOVA descriptives plot with two lines across Pre and Post
+![JASP output screenshot](img/fig058.png)
+
+Figure 14: ANOVA descriptives plot with two lines across Pre and Post
 
 **Part B: Estimate it**
 

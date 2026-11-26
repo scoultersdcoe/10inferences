@@ -236,7 +236,7 @@ The first check looks for sorting. If teachers, families or students could push 
 
 **Part C: Estimate the effect of being offered (ITT)**
 
-9. Run a **Linear Regression**: **rdd\_z\_spring** as Dependent Variable; **rdd\_eligible, rdd\_running, rdd\_elig\_x\_running** as Covariates. Tick **Estimates, Confidence intervals, Model fit **under **Statistics**.
+9. Run a **Linear Regression**: **rdd\_z\_spring** as Dependent Variable; **rdd\_eligible, rdd\_running, rdd\_elig\_x\_running** as Covariates. Tick **Estimates, Confidence intervals, Model fit** under **Statistics**.
 
 **What this model does.** It fits two straight lines, one on each side of the cutoff, and measures the gap between them at 0. Writing out each line shows how:
 

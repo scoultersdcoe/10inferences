@@ -168,7 +168,9 @@ Same four questions as Module 1: what is a row, what is missing, what are typica
 8. Under **Assumption Checks**, tick **Equality of variances**. Leave **Normality** unticked: the Shapiro-Wilk test only works with up to 5,000 students, and this file has more, so JASP stops with an error. You do not need it here. With samples this large, the t-test is not affected by non-normal data (see Module 1).
 9. Under **Plots**, tick **Descriptives plots**.
 
-![JASP output screenshot](img/fig025.png)Figure 6.** **Independent Samples T-Test input panel with z\_spring and arise\_group
+![JASP output screenshot](img/fig025.png)
+
+Figure 6. Independent Samples T-Test input panel with z\_spring and arise\_group
 
 ## Checkpoints
 

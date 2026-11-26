@@ -10,7 +10,7 @@ You have an untreated group, and you know where students started: their fall sco
 - **The trial you wish you had.** A coin flip among schools, which would make the groups alike on everything, measured or not.
 - **The stand-in available.** Comparison students who started in the same place on what you measured, compared through a regression model.
 
-Module 2's weakness was that the groups might have started out different. If we know where each student **started **(their fall score) and some background (English learner status, disability status), we can compare ARISE and comparison students who started in the same place. Regression does this "apples to apples" comparison for us. It is called **controlling for**, **adjusting for**, or **holding constant** those variables.
+Module 2's weakness was that the groups might have started out different. If we know where each student **started** (their fall score) and some background (English learner status, disability status), we can compare ARISE and comparison students who started in the same place. Regression does this "apples to apples" comparison for us. It is called **controlling for**, **adjusting for**, or **holding constant** those variables.
 
 The catch is that a regression can only adjust for what you measured. If ARISE schools differ in something not in the data (teacher quality, principal leadership), regression cannot fix it.
 
@@ -78,7 +78,7 @@ $$
 $$
 
 
-**R-squared (R²)** is the share of the variation in the outcome the model explains, from 0 to 1. A high R² means good prediction; it does** **not mean the arise coefficient is causal.
+**R-squared (R²)** is the share of the variation in the outcome the model explains, from 0 to 1. A high R² means good prediction; it does not mean the arise coefficient is causal.
 
 **A worked example.** Suppose a regression of teacher salary on a "has a master's degree" indicator gives a coefficient of 6,000, meaning teachers with a master's earn $6,000 more on average. Add years of experience to the model and the master's coefficient drops to 2,500. Why? Teachers with master's degrees also tend to have more experience. Once you compare teachers with the same experience, the master's gap is smaller. Watch for exactly this kind of change in the arise coefficient.
 
@@ -128,9 +128,9 @@ $$
 
 ## Example scenarios
 
-**Scenario A: Summer reading camp.** Campers score higher in fall than non-campers, but campers also had higher spring scores before camp. Regression of fall scores on camp attendance, controlling for prior spring score, asks: *A**mong students with the same spring score, did campers score higher in the fall?*
+**Scenario A: Summer reading camp.** Campers score higher in fall than non-campers, but campers also had higher spring scores before camp. Regression of fall scores on camp attendance, controlling for prior spring score, asks: *Among students with the same spring score, did campers score higher in the fall?*
 
-**Scenario B: Small class sizes.** Students in small classes score higher, but small classes are more common in wealthier schools. Controlling for school poverty asks: *A**mong schools with the same poverty level, do students in smaller classes score higher?* It cannot account for anything you didn't measure, such as parent involvement.
+**Scenario B: Small class sizes.** Students in small classes score higher, but small classes are more common in wealthier schools. Controlling for school poverty asks: *Among schools with the same poverty level, do students in smaller classes score higher?* It cannot account for anything you didn't measure, such as parent involvement.
 
 ## Your question in this module
 

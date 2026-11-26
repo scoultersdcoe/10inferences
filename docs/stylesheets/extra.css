@@ -17,3 +17,13 @@
 [data-md-color-scheme="slate"] { --md-typeset-a-color: #9fb3ff; }
 /* Mark data downloads */
 .md-typeset a[href$=".csv"]::after { content: " \2913"; font-size: 0.9em; }
+
+/* Focus mode: hide the menu and widen the text */
+.focus-toggle { display: none; cursor: pointer; }
+@media screen and (min-width: 76.25em) {
+  .focus-toggle { display: inline-block; }
+  .focus-mode .md-sidebar--primary,
+  .focus-mode .md-sidebar--secondary { display: none; }
+  .focus-mode .md-main__inner { max-width: 52rem; }
+  .focus-mode .md-content { max-width: none; }
+}
