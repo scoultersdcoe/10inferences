@@ -255,6 +255,18 @@ Randomization removes selection bias, but real RCTs still face:
 7. Suppose the program had no effect at all, so every student's Y₁ equals their Y₀. What would the 20 possible flips average? Would every flip give zero?
 8. Looking back across the ten modules, write each design's stand-in for the missing world in one line. Which design's assumption do you find hardest to believe for ARISE, and why?
 
+## Read an exemplar
+
+Andersen, S. C., & Nielsen, H. S. (2016). Reading intervention with a growth mindset approach improves children's skills. *Proceedings of the National Academy of Sciences, 113*(43), 12111–12113. [Journal (DOI)](https://doi.org/10.1073/pnas.1607946113)
+
+**Why this study.** Seventy-two second-grade classrooms (1,587 children) in Aarhus, Denmark, were grouped into strata of four with similar language skills, and two classrooms in each stratum were randomly assigned to a home reading program. That is the blocking idea in Module 10, with whole classrooms randomized instead of students. Treatment children scored higher in reading and writing, and effects were larger for children of immigrants and of mothers with less education. The paper opens with a correlational analysis of parents' mindsets, so read the experiment as the main result.
+
+**As you read, ask:**
+
+- *What is the unit of randomization, and why does that matter for the standard errors?*
+- *How do the authors show that randomization balanced the groups?*
+- *Which part of the paper is not protected by randomization?*
+
 ## Learn more
 
 - *The Effect*, Chapter 9, Finding Front Doors: why randomized experiments remove back-door paths, and their practical limits.

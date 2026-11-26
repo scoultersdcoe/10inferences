@@ -319,6 +319,18 @@ The DiD estimate (arise\_x\_post) is how much more ARISE schools' scores changed
 7. Suppose instead that ARISE schools had been gaining 2 points a year more than comparison schools even before ARISE, and that this would have continued. Would DiD's stand-in of 500 be too high or too low? Would DiD overstate or understate the effect?
 8. Sketch the Picture the design figure for your ARISE results, with both groups' lines and the dashed line that copies the comparison group's change. Use your Part C results to say whether that dashed line is believable.
 
+## Read an exemplar
+
+Engzell, P., Frey, A., & Verhagen, M. D. (2021). Learning loss due to school closures during the COVID-19 pandemic. *Proceedings of the National Academy of Sciences, 118*(17), e2022376118. [Open access (DOI)](https://doi.org/10.1073/pnas.2022376118)
+
+**Why this study.** Dutch primary students take national tests in the middle and at the end of each school year. In 2020 an eight-week school closure fell between the two tests. The authors compare students' progress between the tests in 2020 with progress over the same period in 2017, 2018 and 2019, for about 350,000 students. The earlier years' progress is the stand-in for what 2020's progress would have been, which is the difference-in-differences logic of Module 6. Note that the comparison group is earlier cohorts, not untreated schools in the same year. Weighting and fixed-effects models appear only as robustness checks.
+
+**As you read, ask:**
+
+- *What are the two "differences" in this difference-in-differences?*
+- *What does the parallel trends assumption require here, and how do the placebo analyses test it?*
+- *The loss was larger for students from less-educated homes. Which part of Module 11 does that finding connect to?*
+
 ## Learn more
 
 - *The Effect*, Chapter 18, Difference-in-Differences: the logic, parallel trends, testing pre-trends and placebo checks.

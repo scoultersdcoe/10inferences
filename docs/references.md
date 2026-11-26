@@ -22,6 +22,20 @@ Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental and quasi-e
 
 What Works Clearinghouse. (2022). *What Works Clearinghouse procedures and standards handbook, version 5.0*. U.S. Department of Education, Institute of Education Sciences, National Center for Education Evaluation and Regional Assistance. [ies.ed.gov/ncee/wwc/Handbooks](https://ies.ed.gov/ncee/wwc/Handbooks)
 
+## Exemplar studies by module
+
+Each module from 3 to 11 has a Read an exemplar section built around one of these published studies.
+
+- [Module 3](module-03.md#read-an-exemplar): Thompson, P. N., Tomayko, E. J., Gunter, K. B., Schuna, J., Jr., & McClelland, M. (2023). Impacts of the four-day school week on early elementary achievement. *Early Childhood Research Quarterly, 63*, 264–277.
+- [Module 4](module-04.md#read-an-exemplar): Dooley, B., Seals, A., & Skarbek, D. (2014). The effect of prison gang membership on recidivism. *Journal of Criminal Justice, 42*(3), 267–275.
+- [Module 5](module-05.md#read-an-exemplar): Early, D. M., Li, W., Maxwell, K. L., & Ponder, B. D. (2019). Participation in Georgia's Pre-K as a predictor of third-grade standardized test scores. *AERA Open, 5*(2), 1–16.
+- [Module 6](module-06.md#read-an-exemplar): Engzell, P., Frey, A., & Verhagen, M. D. (2021). Learning loss due to school closures during the COVID-19 pandemic. *Proceedings of the National Academy of Sciences, 118*(17), e2022376118.
+- [Module 7](module-07.md#read-an-exemplar): Humphreys, D. K., Gasparrini, A., & Wiebe, D. J. (2017). Evaluating the impact of Florida's "stand your ground" self-defense law on homicide and suicide by firearm: An interrupted time series study. *JAMA Internal Medicine, 177*(1), 44–50.
+- [Module 8](module-08.md#read-an-exemplar): Player, D., & Katz, V. (2016). Assessing school turnaround: Evidence from Ohio. *The Elementary School Journal, 116*(4), 675–698.
+- [Module 9](module-09.md#read-an-exemplar): Holbein, J. B., & Ladd, H. F. (2017). Accountability pressure: Regression discontinuity estimates of how No Child Left Behind influenced student behavior. *Economics of Education Review, 58*, 55–67.
+- [Module 10](module-10.md#read-an-exemplar): Andersen, S. C., & Nielsen, H. S. (2016). Reading intervention with a growth mindset approach improves children's skills. *Proceedings of the National Academy of Sciences, 113*(43), 12111–12113.
+- [Module 11](module-11.md#read-an-exemplar): Yeager, D. S., Hanselman, P., Walton, G. M., et al. (2019). A national experiment reveals where a growth mindset improves achievement. *Nature, 573*(7774), 364–369.
+
 ## Readings by module
 
 Most of the source texts go well beyond this course. These are the chapters that match each module, collected from each chapter's Learn more section.

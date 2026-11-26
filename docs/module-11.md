@@ -339,6 +339,18 @@ Subgroup and dose results are the ones stakeholders remember, and the easiest to
 5. A board member says, "The program clearly works only for English learners, since that is where the effect is biggest." What would you say?
 6. If you were designing a study to learn whether more sessions cause more gains, how could you use a coin flip to do it?
 
+## Read an exemplar
+
+Yeager, D. S., Hanselman, P., Walton, G. M., et al. (2019). A national experiment reveals where a growth mindset improves achievement. *Nature, 573*(7774), 364–369. [Journal (DOI)](https://doi.org/10.1038/s41586-019-1466-y) · [Free copy (eScholarship)](https://escholarship.org/uc/item/4xx99912)
+
+**Why this study.** About 12,500 ninth graders in 65 nationally representative U.S. high schools were randomly assigned within their schools to a short online growth mindset program or a control module. The study asks where the program works, not only whether it does. Before seeing the results, the authors registered that they would focus on lower-achieving students, among whom core GPA rose by about 0.10 grade points. They also registered two school-level moderators: effects were largest in middle-achieving schools whose students' peers valued taking on challenges. The authors note that school norms were measured, not randomly assigned, the same distinction Module 11 makes between what the coin flip protects and what it does not.
+
+**As you read, ask:**
+
+- *Which subgroup analyses were registered before the results were known, and why does that matter?*
+- *Why is the moderation by school norms not causal, even though the program itself was randomized?*
+- *How would you explain to a principal what "where it works" means for their school?*
+
 ## Learn more
 
 - *The Effect*, Chapter 10, Treatment Effects: heterogeneous effects, conditional effects and which average a design produces.

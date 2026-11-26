@@ -296,6 +296,18 @@ Each row in this file is a school average, but mean\_z is still in student-level
 8. Suppose the ARISE schools' scores before the program had bounced around (486, 495, 488) instead of rising steadily. How would that change your trust in the projected trend as a stand-in?
 9. Sketch the Picture the design figure for your ARISE results from Part A, with the pre-ARISE trend, the trend projected forward, and where ARISE scores actually landed. Which part of the gap could be explained by something other than ARISE?
 
+## Read an exemplar
+
+Humphreys, D. K., Gasparrini, A., & Wiebe, D. J. (2017). Evaluating the impact of Florida's "stand your ground" self-defense law on homicide and suicide by firearm: An interrupted time series study. *JAMA Internal Medicine, 177*(1), 44–50. [Journal (DOI)](https://doi.org/10.1001/jamainternmed.2016.6811)
+
+**Why this study.** Florida's 2005 "stand your ground" law took effect on a known date. The authors model monthly homicide rates from 1999 to 2014 with segmented regression, adjusting for seasons, and ask whether the rates jumped or changed trend when the law began. Florida's own pre-2005 trend is the stand-in, as in Module 7. After the law, homicide rose by about 24% and firearm homicide by about 32%. The authors also check comparison states and suicide, an outcome the law should not affect, which previews Module 8.
+
+**As you read, ask:**
+
+- *Which coefficient in their model corresponds to post, and which to time_after?*
+- *Why do they adjust for season, and how does that compare with the winter and spring variables in Module 7?*
+- *What do the comparison states and the suicide outcome rule out that the Florida series alone could not?*
+
 ## Learn more
 
 - *The Effect*, Chapter 17, Event Studies: using the period before an event to predict what would have happened, and measuring the deviation from that prediction. ITS applies the same logic.

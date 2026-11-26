@@ -280,6 +280,18 @@ Translate the matched t-test estimate into i-Ready points, share of a year's gro
 7. Dev, Eli and Fay were never used. Using their propensity scores, explain why they had no partner and what this says about overlap.
 8. Two students with the same propensity score can still differ on individual characteristics. Why is that acceptable when the goal is an average effect? What must the balance check show for the matched comparison group to be a believable stand-in?
 
+## Read an exemplar
+
+Early, D. M., Li, W., Maxwell, K. L., & Ponder, B. D. (2019). Participation in Georgia's Pre-K as a predictor of third-grade standardized test scores. *AERA Open, 5*(2), 1–16. [Open access (DOI)](https://doi.org/10.1177/2332858419848687)
+
+**Why this study.** Children who attended Georgia's Pre-K are compared with children who did not, four years later on third grade state tests. Families chose Pre-K, so the authors estimate each child's probability of attending from measured characteristics and pair each Pre-K child with a non-attender who had a similar probability, giving 46,262 children in each group. That is the Module 5 stand-in. Effects are small (d = .06 to .09), which makes this a good study for weighing statistical against practical significance, and the authors report how effects differ by family income and home language.
+
+**As you read, ask:**
+
+- *Which characteristics went into the propensity score, and which plausible reasons for choosing Pre-K are missing?*
+- *How do the authors show that matching balanced the groups?*
+- *The title says "predictor." Why might the authors have chosen that word instead of "effect"?*
+
 ## Learn more
 
 - *The Effect*, Chapter 14, Matching: propensity scores, choosing matches, calipers, balance tables and common support.

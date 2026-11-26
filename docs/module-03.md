@@ -288,6 +288,18 @@ The causal assumption, which matters most:
 7. Suppose ARISE schools also had more experienced teachers, and that this added 3 points to every ARISE student's spring score. Teacher experience is not in the data. What would regression report in the running example, and why can't adjusting for fall scores fix this?
 8. In your own words, what does controlling for fall scores do to the stand-in? Sketch the Picture the design figure for your Run 2 results, with the comparison line and where the ARISE students fall relative to it.
 
+## Read an exemplar
+
+Thompson, P. N., Tomayko, E. J., Gunter, K. B., Schuna, J., Jr., & McClelland, M. (2023). Impacts of the four-day school week on early elementary achievement. *Early Childhood Research Quarterly, 63*, 264–277. [Journal (DOI)](https://doi.org/10.1016/j.ecresq.2022.12.009) · [Free author manuscript (PubMed Central)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9979633)
+
+**Why this study.** Oregon students who started kindergarten in a four-day-week district are compared with students in five-day districts on their 3rd grade math and English language arts scores. Districts chose the schedule, so the authors adjust for what they measured, above all each student's kindergarten assessment scores, along with student and school characteristics. That is the Module 3 stand-in: comparison students who started in the same place on what was measured. The authors also explain why they could not use the difference-in-differences approach of earlier studies, and they report effects by subgroup, which previews Module 11.
+
+**As you read, ask:**
+
+- *What plays the role of z_fall in this study, and why is it the most important control?*
+- *Which differences between four-day and five-day districts could the regression not adjust for?*
+- *Why do the authors say they could not include district fixed effects, and what does that cost them?*
+
 ## Learn more
 
 - *The Effect*, Chapter 4, Describing Relationships: line-fitting and what "controlling for" a variable does.

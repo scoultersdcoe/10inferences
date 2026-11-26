@@ -358,6 +358,18 @@ This design gives two numbers, and each answers a different question. The ITT (P
 8. The estimate applies to students near the cutoff. In the running example, why would it be risky to use it to describe Dev, who scored 430?
 9. Suppose students who scored just above the cutoff could retake the fall test to get below it and into the program. Why would that break the stand-in? Which check in this module looks for this problem?
 
+## Read an exemplar
+
+Holbein, J. B., & Ladd, H. F. (2017). Accountability pressure: Regression discontinuity estimates of how No Child Left Behind influenced student behavior. *Economics of Education Review, 58*, 55–67. [Journal record (IDEAS/RePEc)](https://ideas.repec.org/a/eee/ecoedu/v58y2017icp55-67.html)
+
+**Why this study.** Under No Child Left Behind, a North Carolina school either made or failed to make adequate yearly progress based on a formula with fixed targets. Schools just on either side of that line were nearly identical, but those that failed faced accountability pressure. The authors compare student behavior in those schools: attendance and tardiness, and suspensions, fights and offenses reported to law enforcement. Students showed up more and on time, but misbehavior also rose. Like Module 9, the study checks several bandwidths. Unlike Module 9, it is a sharp design, because failing the target applied automatically.
+
+**As you read, ask:**
+
+- *What is the running variable, and where is the cutoff?*
+- *Why is a sharp design simpler to analyze than the fuzzy design in Module 9?*
+- *Who does the estimate describe? Would it apply to schools far from the cutoff?*
+
 ## Learn more
 
 - *The Effect*, Chapter 20, Regression Discontinuity: running variables, bandwidths, fuzzy RDD and checks for manipulation and balance.

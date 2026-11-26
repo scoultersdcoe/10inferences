@@ -266,6 +266,18 @@ Translate the arise\_x\_post and arise\_x\_time\_after coefficients with the tab
 7. Describe the stand-in for each of DiD (Module 6), ITS (Module 7) and CITS in one sentence each. How is CITS like DiD, and how is it like ITS?
 8. In your results, did the comparison schools move off their own trend at window 7? What does that tell you about whether history affected your Module 7 estimate?
 
+## Read an exemplar
+
+Player, D., & Katz, V. (2016). Assessing school turnaround: Evidence from Ohio. *The Elementary School Journal, 116*(4), 675–698. [Journal and summary (UVA Batten School)](https://batten.virginia.edu/research/assessing-school-turnaround-evidence-from-ohio/)
+
+**Why this study.** Twenty low-performing Ohio schools took part in a two-year school turnaround program. The authors compare these schools' achievement trends before and after the program with the trends of similar schools that did not take part, a comparative interrupted time series. As in Module 8, a change in the program schools counts as an effect only if it goes beyond what happened to the comparison schools over the same years. The comparison schools were chosen with propensity scores, a common way to pick a comparison series.
+
+**As you read, ask:**
+
+- *How were the comparison schools chosen, and why does that choice matter for the design?*
+- *Were the program and comparison schools on similar trends before the program?*
+- *With only 20 program schools, how confident can you be in the estimates? Compare with the four ARISE schools.*
+
 ## Learn more
 
 - *The Effect*, Chapter 17, Event Studies, and Chapter 18, Difference-in-Differences: combining a before-and-after comparison with an untreated group, and checking for differences in prior trends.

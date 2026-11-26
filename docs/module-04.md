@@ -271,6 +271,18 @@ Translate the matched estimate into i-Ready points, share of a year's growth or 
 7. Cruz was dropped. Who does the +5 describe? If students like Cruz benefited more, or less, than other students, how could the matched estimate mislead someone who wants the effect for all ARISE students?
 8. Gia and Ava match exactly on fall score. Name something they might still differ on that would make Gia a poor stand-in for Ava. Can exact matching protect against that? Why or why not?
 
+## Read an exemplar
+
+Dooley, B., Seals, A., & Skarbek, D. (2014). The effect of prison gang membership on recidivism. *Journal of Criminal Justice, 42*(3), 267–275. [Journal (DOI)](https://doi.org/10.1016/j.jcrimjus.2014.01.002) · [Free accepted manuscript (King's College London)](https://kclpure.kcl.ac.uk/ws/files/11011418/Dooley_Seals_and_Skarbek_final_.pdf)
+
+**Why this study.** Everyone released from Illinois prisons in November 2000 is followed for about two years. Prison gang members are compared with non-members on return to prison and rearrest, after matching them on prior arrests, age, sex, race, education, family status, offense, time served and release county. The method is coarsened exact matching: continuous variables are grouped into bins, people are matched exactly within those bins, and anyone without a match is dropped. That is how em_cell works in Module 4. The unmatched gap shrinks by about half once the groups are matched, the same lesson as ARISE.
+
+**As you read, ask:**
+
+- *Which characteristics define the matching cells, and which important ones could not be measured?*
+- *How many people were dropped because they had no match, and who does the matched estimate describe?*
+- *Why did the estimated effect get smaller after matching?*
+
 ## Learn more
 
 - *The Effect*, Chapter 14, Matching: exact and approximate matching, weighting, balance checks and common support.
