@@ -1,0 +1,11 @@
+:root { --md-text-font: "Georgia", "Iowan Old Style", "Palatino Linotype", serif; --md-code-font: ui-monospace, "SFMono-Regular", Menlo, monospace; }
+.md-typeset { font-size: 0.86rem; line-height: 1.7; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.md-typeset h1 { font-weight: 700; letter-spacing: -0.01em; }
+.md-typeset .subtitle { font-family: system-ui, sans-serif; font-size: 1.3rem; margin-top: -0.6rem; color: var(--md-default-fg-color--light); }
+.md-typeset .byline { font-family: system-ui, sans-serif; color: var(--md-default-fg-color--light); }
+.md-typeset img { display: block; margin: 1rem auto; max-width: 100%; border-radius: 4px; }
+.md-typeset .arithmatex { overflow-x: auto; overflow-y: hidden; }
+.md-typeset table:not([class]) { font-size: 0.78rem; }
+.md-typeset table:not([class]) th { white-space: nowrap; }
+@media print { .md-header, .md-sidebar, .md-footer { display: none; } }

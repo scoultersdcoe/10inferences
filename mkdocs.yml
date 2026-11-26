@@ -1,0 +1,90 @@
+site_name: "10 Inferences: Causal Designs in JASP"
+site_description: A problem-first guide to causal research designs, worked in JASP with data from the ARISE literacy program.
+site_author: Shannon Coulter
+# Set this to your Pages address, e.g. https://<user>.github.io/<repo>/
+# site_url: https://example.github.io/10-inferences/
+copyright: "© 2026 Shannon Coulter"
+use_directory_urls: false
+
+theme:
+  name: material
+  language: en
+  font: false
+  icon:
+    logo: material/book-open-page-variant
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.tooltips
+
+plugins:
+  - search
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - footnotes
+  - def_list
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.superfences
+  - pymdownx.details
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Front matter:
+      - How to use this book: preface.md
+  - "Part I. Foundations":
+      - "Part 1: Foundations": part1-foundations.md
+      - "Part 2: The ARISE data and JASP": part2-data-and-jasp.md
+  - "Part II. The designs":
+      - "Module 1: One-group pre-post": module-01.md
+      - "Module 2: Posttest-only comparison": module-02.md
+      - "Module 3: Regression adjustment": module-03.md
+      - "Module 4: Exact matching": module-04.md
+      - "Module 5: Propensity score matching": module-05.md
+      - "Module 6: Difference-in-differences": module-06.md
+      - "Module 7: Interrupted time series": module-07.md
+      - "Module 8: Comparative ITS": module-08.md
+      - "Module 9: Regression discontinuity": module-09.md
+      - "Module 10: Randomized trial": module-10.md
+      - "Module 11: Heterogeneity and dose": module-11.md
+  - "Part III. Putting it together":
+      - "Wrap-up: The designs side by side": wrap-up.md
+  - Back matter:
+      - Glossary: glossary.md
+      - References: references.md
