@@ -9,3 +9,11 @@
 .md-typeset table:not([class]) { font-size: 0.78rem; }
 .md-typeset table:not([class]) th { white-space: nowrap; }
 @media print { .md-header, .md-sidebar, .md-footer { display: none; } }
+
+/* Make links easy to see in both light and dark modes */
+.md-typeset a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.md-typeset a.headerlink { text-decoration: none; }
+[data-md-color-scheme="default"] { --md-typeset-a-color: #3949ab; }
+[data-md-color-scheme="slate"] { --md-typeset-a-color: #9fb3ff; }
+/* Mark data downloads */
+.md-typeset a[href$=".csv"]::after { content: " \2913"; font-size: 0.9em; }
